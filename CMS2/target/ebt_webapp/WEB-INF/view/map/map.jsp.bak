@@ -223,13 +223,13 @@
                     	<c:forEach var="m" items="${marker}" varStatus="status">
                     	<tr>
                     		<c:if test="${m.marker_file_type eq 1}">
-	                        <div class="serverLen">http://112.169.69.112:8893/${m.marker_file}</div>
+	                        <div class="serverLen">http://112.169.63.197:8893/${m.marker_file}</div>
 	                        </c:if>
                     		<c:if test="${m.marker_file_type eq 2}">
-	                        <div class="serverGff">http://112.169.69.112:8893/${m.marker_file}</div>
+	                        <div class="serverGff">http://112.169.63.197:8893/${m.marker_file}</div>
 	                        </c:if>
                     		<c:if test="${m.marker_file_type eq 3}">
-	                        <div class="serverMaker">http://112.169.69.112:8893/${m.marker_file}</div>
+	                        <div class="serverMaker">http://112.169.63.197:8893/${m.marker_file}</div>
 	                        </c:if>
                        </tr>
                     	</c:forEach>

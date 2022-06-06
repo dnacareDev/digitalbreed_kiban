@@ -8,7 +8,7 @@
 		<property name="password" value="PrefServer@)20" />
 		<property name="url" value="jdbc:mysql://localhost:3306/digitalSix?serverTimezone=Asia/Seoul" />
 		-->
-		<property name="url" value="jdbc:mysql://112.169.69.112:8844/digitalSix?serverTimezone=Asia/Seoul" />
+		<property name="url" value="jdbc:mysql://112.169.63.197:8844/digitalSix?serverTimezone=Asia/Seoul" />
 		<property name="username" value="bms"/>
 		<property name="password" value="bms!@#$"/>
 	</bean>
