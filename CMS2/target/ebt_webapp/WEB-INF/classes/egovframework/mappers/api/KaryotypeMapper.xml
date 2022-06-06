@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.KaryotypeMapper">
+	<!--  -->
+	<select id="SelectMarkerCount" resultType="int">
+		SELECT COUNT(*) FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE mf.marker_file_type = 1 
+	</select>
+	
+	<!--  -->
+	<select id="SelectMarkerList" resultType="kr.or.ih.api.entity.Marker">
+		SELECT * FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE mf.marker_file_type = 1 
+		ORDER BY m.CREATE_DATE DESC
+		LIMIT #{offset}, #{limit}
+	</select>
+	
+	<!--  -->
+	<select id="SelectMarkerDetail" parameterType="int" resultType="kr.or.ih.api.entity.Marker">
+		SELECT * FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE m.marker_id = #{marker_id} AND (mf.marker_file_type = 1 OR mf.marker_file_type = 2)
+	</select>
+</mapper>

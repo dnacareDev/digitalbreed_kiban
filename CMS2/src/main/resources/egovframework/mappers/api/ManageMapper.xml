@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.ManageMapper">
+	<select id="SelectManage" resultType="kr.or.ih.api.entity.Counts">
+		SELECT user_username, user_status,
+        (SELECT COUNT(*) FROM analysis WHERE analysis_type = 9 AND user_username = u.user_username) AS userresult,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 1 AND user_username = u.user_username) AS map,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 2 AND user_username = u.user_username) AS poly,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 3 AND user_username = u.user_username) AS mabc,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 4 AND user_username = u.user_username) AS phylogeny,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 5 AND user_username = u.user_username) AS spec,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 6 AND user_username = u.user_username) AS qtl,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 7 AND user_username = u.user_username) AS ngs,
+		(SELECT COUNT(*) FROM analysis WHERE analysis_type = 8 AND user_username = u.user_username) AS snp
+		FROM user u
+		WHERE u.user_username != 'admin'
+	</select>
+	
+	<update id="UpdateUserStatus">
+		UPDATE user
+		SET user_status = #{user_status}
+		WHERE user_username = #{user_username}
+	</update>
+</mapper>

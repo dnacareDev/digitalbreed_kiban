@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.sam-kr300 {font-family:'sam-kr300',sans-serif;}
+.sam-kr400 {font-family:'sam-kr400',sans-serif;}
+.sam-kr500 {font-family:'sam-kr500',sans-serif;}
+.sam-kr600 {font-family:'sam-kr600',sans-serif;}
+.sam-kr700 {font-family:'sam-kr700',sans-serif;}
+
+.sharp_b {font-family:'sharp-b',sans-serif;}
+.sharp_m {font-family:'sharp-m',sans-serif;}
+.sharp_r {font-family:'sharp-r',sans-serif;}
+
+@media screen and (max-width:780px){
+  .sharp_b {letter-spacing: 0;}
+  .sharp_m {letter-spacing: 0;}
+  .sharp_r {letter-spacing: 0;}
+}
+
+
+/*korean fonts*/
+@font-face{
+  font-family:'sam-kr200';
+  src:url('../font/SamsungOne//SamsungOneKoreanOTF200.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr200c';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF200C.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr300';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF300.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr300c';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF300C.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr400';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF400.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr400c';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF400C.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr500';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF500.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr500c';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF500C.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr600';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF600.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr600c';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF600C.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr700';
+  src:url('../font/SamsungOne/SamsungOneKoreanOTF700.otf') format('opentype');
+}
+@font-face{
+  font-family:'sam-kr700c';
+  src:url('../font/SamsungOne/KoreanOTF700C.otf') format('opentype');
+}
+
+
+/* SamsungSharp */
+@font-face{
+  font-family:'sharp-b';
+  src:url('../font/SamsungSharpSans/SamsungSharpSans-Bold.ttf') format('truetype'),
+      url('../font/SamsungSharpSans/SamsungSharpSans-Bold.woff') format('woff');
+}
+@font-face{
+  font-family:'sharp-m';
+  src:url('../font/SamsungSharpSans/SamsungSharpSans-Medium.ttf') format('truetype'),
+      url('../font/SamsungSharpSans/SamsungSharpSans-Medium.woff') format('woff');
+}
+@font-face{
+  font-family:'sharp-r';
+  src:url('../font/SamsungSharpSans/SamsungSharpSans-Regular.ttf') format('truetype'),
+      url('../font/SamsungSharpSans/SamsungSharpSans-Regular.woff') format('woff');
+}

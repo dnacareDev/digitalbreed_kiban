@@ -1,0 +1,56 @@
+@charset "utf-8";
+/****************** main ******************/
+/********* table section *********/
+#main .result_table_section .result_data_table {margin-bottom: 50px;}
+
+#main .result_table_section .result_data_table .table_head,
+#main .result_table_section .result_data_table .table_list {padding: 15px 10px;}
+
+#main .result_table_section .result_data_table .table_head:not(:last-child):before,
+#main .result_table_section .result_data_table .table_list:not(:last-child):before {height: 31px}
+
+/*** table head ***/
+#main .result_table_section .result_data_table .table_head > .head_title {margin-bottom: 0; font-weight: bold;}
+
+/*** table list ***/
+#main .result_table_section .result_data_table .table_list {height: auto;}
+
+/* table - 상태 - 임시저장 */
+#main .result_table_section .result_data_table .table_list.save {color: #0ABC33;}
+
+/* table - 상태 - 미확인 */
+#main .result_table_section .result_data_table .table_list.no_check {color: #6F6F6F;}
+
+/* table - 상태 - 전송완료 */
+#main .result_table_section .result_data_table .table_list.send {color: #1D50AF;}
+
+
+
+/****************** dimm ******************/
+/********* dimm form *********/
+.dimm.on .new_result_box .new_result_form {position: relative; padding: 30px 53px;}
+
+/*** dimm - form - box ***/
+.dimm.on .new_result_box .data_right_box .new_data_box:nth-child(2n-1) {display: block;}
+.dimm.on .new_result_box .data_box > .new_data_box > label {font-size: 14px; margin-bottom: 10px;}
+
+.dimm.on .new_result_box .data_box > .new_data_box:first-child > label {margin-bottom: 0;}
+
+/* file 첨부 */
+.dimm.on .new_result_box .new_result_form .data_box > .new_data_box {margin-bottom: 20px;}
+.dimm.on .new_result_box .new_data_box:nth-child(2) > .input_box > .file_title {border: 1px dashed #707070; padding-left: 40px; position: relative;}
+.dimm.on .new_data_box:nth-child(2) > .input_box > .file_title:before {content: ''; position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 17px; height: 19px; background: url(../../images/add_fille.png) no-repeat; background-size: 100%;}
+
+.dimm.on .new_result_box .new_result_form .new_data_box > select,
+.dimm.on .new_result_box .new_result_form .new_data_box > select > option {font-size: 14px; font-weight: 700; color: #6F6F6F;}
+
+
+.dimm.on .new_result_box .new_data_form .new_data_box > select {position: relative;}
+.dimm.on .new_result_box .data_box > .new_data_box > .select_arrow {position: relative; display: block;}
+
+/* select - arrow */
+.dimm.on .new_result_box .data_box > .new_data_box > .select_arrow:after {content: ''; position: absolute; top: 47px; right: 30px; width: 7px; height: 6px; background: url(../../images/select_arrow.png) no-repeat; background-size: 100%; z-index: 111;}
+.dimm.on .data_right_box > .new_data_box:first-child > .select_arrow:after {top: 43px;}
+
+/*** dimm - form - btn ***/
+.dimm.on .new_result_box .new_result_form .canel_save_btn {position: absolute; bottom: 30px; right: 40px;}

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/** 
+   Bang So Jung CSS
+   http://bangsojung.com/
+**/
+/*
+
+        기본 공통 CSS
+
+*/
+
+
+@import url(layout.css);
+@import url(contents.css);
+
+<!-- @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); --> 
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Black.otf') format('otf');
+    font-weight: Black;
+    font-style: Black;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Bold.otf') format('otf');
+    font-weight: Bold;
+    font-style: Bold;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Light.otf') format('otf');
+    font-weight: Light;
+    font-style: Light;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Medium.otf') format('otf');
+    font-weight: Medium;
+    font-style: Medium;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Regular.otf') format('otf');
+    font-weight: Regular;
+    font-style: Regular;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('font/NotoSansKR-Thin.otf') format('otf');
+    font-weight: Thin;
+    font-style: Thin;
+}
+
+
+
+body,html {height:100%;}
+body.hidden {overflow:hidden;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, textarea, button,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, menu,
+nav, output, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;word-break:keep-all;} body{position:relative;color:#333} html {-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;} img,fieldset{border:0} table{border-collapse:collapse} img {vertical-align:top;max-width:100%;} em,address{font-style:normal} a {color:inherit;text-decoration:none;} strong {font-weight:600;} .tac {text-align:center;} .tal {text-align:left} .tar {text-align:right;}
+#WRAP {height:100%;font-family:"Noto Sans KR","Malgun Gothic","AppleSDGothcNeo","AppleGothic", sans-serif;font-weight:400;color:#000;font-smoothing:antialiased;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-0.3px;}
+a {color:#000;}
+/* SKIP */
+#SKIP {position:relative;z-index:99999999999;}
+#SKIP a {display:block;overflow:hidden;width:1px;height:1px;margin-bottom:-1px;background:#151c2d;font-weight:500;font-size:16px;color:#fff;white-space:nowrap;text-align:center;}
+#SKIP a:focus,
+#SKIP a:active {position:absolute;width:100%;height:auto;margin-bottom:10px;padding:5px;left:0;top:0;box-sizing:border-box;}
+
+
+
+/* layout common */
+.l-maxWidth {max-width:1720px;margin:0 auto;}
+.maxWidth {max-width:1200px;margin:0 auto;}
+.l-table {display:table;table-layout:fixed;width:100%;height:100%;}
+.l-cell {display:table-cell;vertical-align:middle;}
+.l-cell.bottom {vertical-align:bottom;}
+.column {font-size:0;}
+.column > li {display:inline-block;vertical-align:top;position:relative;list-style:none;}
+.column.col_3 {margin:-2% -1.25%;}
+.column.col_3 > li {width:30.8%;margin:2% 1.25%;}
+.column.col3 > li {width:33.3333333%;}
+.column.col4 > li {width:25%;}
+.column.col_4 {margin:-1.7% -1%;}
+.column.col_4 > li {width:23%;margin:1.7% 1%;}
+.column.col2 > li {width:50%;}
+.column.col_2 {margin:-1.5% -1.25%;}
+.column.col_2 > li {width:47.5%;margin:1.5% 1.25%;}
+.overflow {overflow:hidden;}
+.inner--left {float:left;}
+.inner--right {float:right !important;}
+.ls0 {letter-spacing:0px}
+.clear {clear:both;}
+.blind {visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+@media screen and (max-width: 1230px){
+    .maxWidth {margin:0 15px;}
+}
+
+
+
+
+/* FORM */
+input[type=text],
+input[type=password],
+select,
+textarea {font-family:'Noto Sans KR',"Malgun Gothic","AppleSDGothcNeo","AppleGothic", sans-serif;transition:all .3s ease-out;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;outline:none;appearance:none;-webkit-appearance:none;-moz-appearance:none;-webkit-border-radius:0;border-radius:0;-moz-border-radius:0;resize:none;}
+
+button,
+input[type=button],
+input[type=submit] { cursor: pointer; vertical-align: middle;appearance:none;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-webkit-border-radius:0;border-radius:0;-moz-border-radius:0;font-family:'Noto Sans KR',"Malgun Gothic","AppleSDGothcNeo","AppleGothic", sans-serif;}
+
+input[type=text]:focus,
+input[type=password]:focus,
+select:focus,
+textarea:focus {border-color:#00884f !important;}
+
+input[type=text],
+input[type=password],
+select,
+textarea {font-family:'Noto Sans KR';}
+
+input[type="radio"] {display:none !important;}
+input[type="radio"] + label {display:inline-block !important;font-weight:400;font-size:16px;color:#555;cursor:pointer;}
+input[type="radio"] + label > span {display:inline-block;width:24px;height:24px;margin:-2px 4px 0 0;vertical-align:middle;background-image:url(../../images/common/check_radio_sheet.png);background-position:center;cursor:pointer;}
+input[type="radio"]:checked + label {font-weight:600;color:#00ac84;}
+input[type="radio"]:checked + label > span {background-image:url(../../images/common/check_radio_sheet_on.png);background-size:100%;}
+@media screen and (max-width: 768px){
+    input[type="radio"] + label {font-size:14px;}
+}
+
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {font-weight:400;font-size:1rem;color:#555;line-height:1.625rem;;}
+input[type="checkbox"] + label > span {display:inline-block;width:1.625rem;height:1.625rem;margin:0 0.625rem 0 0;border-radius:1.625rem;vertical-align:middle;background-image:url(../../images/common/check_sheet.svg);background-position:center;cursor:pointer;background-size:100%;}
+input[type="checkbox"]:checked + label > span {background-image:url(../../images/common/check_sheet_on.svg);}
+@media screen and (max-width: 768px){
+    input[type="checkbox"] + label {font-size:14px;}
+}
+
+select { background: url(../../images/common/select.svg) no-repeat 95% center; appearance:none;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none; -webkit-border-radius:1px;border-radius:1px;-moz-border-radius:1px;}
+select::-ms-expand { display: none; }
+select { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
+
+
+html {font-size:16px;}
+@media screen and (max-width: 768px){
+    html {font-size:15px;}
+}
+@media screen and (max-width: 540px){
+    html {font-size:14px;}
+}
+@media screen and (max-width: 375px){
+    html {font-size:13px;}
+}

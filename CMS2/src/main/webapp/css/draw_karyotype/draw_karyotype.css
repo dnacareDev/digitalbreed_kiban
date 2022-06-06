@@ -1,0 +1,337 @@
+@charset "utf-8";
+::-webkit-scrollbar {width:8px; height: 8px;}
+::-webkit-scrollbar-track {background:#efefef;}
+::-webkit-scrollbar-thumb {background-color:#9999; border-radius: 4px;}
+
+#wrap {min-height: 100vh; height: auto; padding: 24px 24px 0 0; overflow-y: auto; overflow-x: hidden;}
+
+/* header, main 공통 */
+#header, #main {height: 100%;}
+
+#main .user_header {margin-bottom: 20px;}
+.file_box {position: absolute; left: 20px; bottom: 30px;}
+
+/******* check box 공통 *******/
+input[type="checkbox"] {display: none;}
+input[type="checkbox"] + label {width: 18px; height: 18px; padding: 0; background: url('../../images/none_check.png') no-repeat; border: none; position: relative;}
+input[type="checkbox"] + label:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: url('../../images/check_box.png') no-repeat; opacity: 0; transition: 0.2s all;}
+input[type="checkbox"]:checked + label:before {opacity: 1;}
+
+
+/******* section - header *******/
+#main .mark_map_sect .data_table_title {font-weight: bold; margin: 0 0 20px;}
+
+/* mab_top_bar */
+.mab_top_bar {position: relative; display: flex; align-items: flex-start; flex-direction: column; padding-bottom: 0px; border-bottom: 1px solid #03A6FF; margin-bottom: 20px;}
+.mab_bar_left {position: relative; display: flex; align-items: center; margin: 0 10px 20px 0;}
+
+.mab_bar {display: flex; align-items: center;}
+.input_file_wrap {display: flex; position: relative;}
+.input_file_wrap .chart_btn {background-color: #0099ff; color: #fff; line-height: 35px; width: 120px; margin-right: 2px; border-radius: 4px 4px 0 0; font-size: 12px; font-weight: bold;}
+/* active */
+.input_file_wrap .chart_btn.active {background-color: #006ca7;}
+
+
+    
+.mab_bar_left select {width: 112px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; background: #fff; padding: 0 16px;}
+.mab_bar_left select.type_select_info {width: 200px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; margin: 0px 0px 0 5px; overflow-x: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.mab_top_bar .give_info {position: absolute; bottom: 10px; left: 5px; font-size: 14px; color: #707070;}
+
+/* view */
+.mab_top_bar div.view {position: absolute; right: 0; bottom: 0; width: 168px; height: 48px; font-size: 14px; font-weight: bold; text-align: center; display: flex;}
+.mab_top_bar div.view .commonBtn {background: #397FF4; color: #fff; border: none; width: 100%; line-height: 48px;}
+
+
+/* header */
+.data_header {display: flex; justify-content: space-between; margin-bottom: 10px; padding-right: 10px;}
+.data_header > .export_btn {background-color: #fff; font-size: 14px; line-height: 40px; border: 1px solid #222222; padding: 0 30px; border-radius: 4px; font-weight: 700;}
+
+.data_header .chartInput {line-height: 25px; border: 1px solid #E3E3E3; max-width: 300px; width: 100%; padding: 3px 20px; border-radius: 4px; -webkit-border-radius: 4px; background: #fff url('../../images/search.png') no-repeat right 20px center;}
+
+/* chartWrap */
+/* .chartWrap {width: 100%; height: 750px;}
+.chartWrap #chartCanvas {width: 100%; height: 100%;} */
+
+
+
+/*----------------------*/
+/*         차트         */
+/*----------------------*/
+.chartArea{}
+.chartInput{}
+.chartContainer{width: 100%;height: 490px;}
+.chartWrap{height: 490px;display: flex; padding-bottom: 20px; overflow:auto}
+.chartElName{height: 100%;width: 140px; display: flex;flex-direction: column;align-items: center; margin: 0 15px;}
+.chartEl{width: 36px;height: 100%;background-color: rgba(0, 0, 0, 0.1);position: relative;}
+.chartStack{width: 100%;height: 3px;position: absolute;left: 0;background-color: salmon;}
+.chartName{text-align: center; font-size: 13px; margin-bottom: 10px;}
+.chartStackName{cursor: pointer;position: absolute;left: 80px;font-size: 10px;}
+.chartStackLine{position: absolute;height: 1px;border-top: 1px solid #000;transform-origin: 0 0;left: 38px;}
+.stackAni{animation: stackOpacity 1300ms infinite forwards;}
+@keyframes stackOpacity{0%{opacity: 1;}50%{opacity: 0.5;}100%{opacity: 1;}}
+
+
+.chart_parent{display: flex; width: 100%;} 
+.chart_box_wrap{width: 100%; overflow: hidden;}
+.standard_wrap{position: relative; width: 100px;height: 432px; border-left: 1px solid #000;}
+.standard_wrap div{position: absolute; transform: translateY(-50%); font-size: 13px;}
+.standard_wrap div::before{position: absolute; content: ""; width: 20px; height: 1px; border-top:1px solid #000; left: -2px;}
+.standard_wrap div:nth-child(1){top: 2%;}
+.standard_wrap div:nth-child(2){top: 18%;}
+.standard_wrap div:nth-child(3){top: 37%;}
+.standard_wrap div:nth-child(4){top: 58%;}
+.standard_wrap div:nth-child(5){top: 78%;}
+.standard_wrap div:nth-child(6){top: 97%; border-top: 0px;}
+.standard_wrap div:nth-child(6)::before{bottom: -4px;}
+
+.inputColor{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+
+
+
+.cloneParent{padding-top: 1000px;display: flex;align-items: flex-end;}
+
+.sp-original-input-container{pointer-events: none; opacity: 0; }
+
+
+
+/* 21-12-15 추가 - css */
+#wrap > main#main {
+    max-height: 100%;
+    height: auto;
+}
+
+.data_table_title_wrap a {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.mab_bar > .input_file_wrap > .under_marker_check > span,
+.mab_bar > .input_file_wrap .ex_data {
+    font-size: 12px;
+}
+
+.mab_bar > .input_file_wrap .ex_data {
+    position: absolute;
+    top: -33px;
+    left: -15px;
+}
+
+#wrap input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+.mab_bar > .input_file_wrap > .under_marker_check {
+    display: flex;
+    align-items: center;
+    top: auto;
+    bottom: -25px;
+    left: 3px;
+}
+
+.mab_bar > .input_file_wrap > .under_marker_check input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+
+.mab_top_bar {
+    padding-bottom: 40px;
+    align-items: flex-end;
+}
+
+.mab_top_bar.karo_top_bar {
+	padding-bottom: 0px;
+    align-items: flex-start;
+}
+
+.data_table_title_wrap {
+    margin-bottom: 30px;
+}
+
+.select_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.select_box .select_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.select_box .select_wrap .data_name {
+    padding-left: 3px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.select_box .select_wrap:last-child .data_name {
+    padding-left: 8px;
+}
+
+
+.tableContainer .tableWrap .table > thead > tr > th {
+    line-height: 20px;
+}
+
+.tableContainer .tableWrap .table > thead > tr > th:first-child {
+    line-height: 25px;
+}
+
+.visualWrap .tableContainer .tableWrap,
+.tableContainer .tableWrap .table {
+    max-width: 100%;
+}
+
+#main select, 
+#main input {
+    border-color: #dadada;
+}
+
+.mab_top_bar div.view .commonBtn {
+    font-size: 14px;
+}
+
+#main .view {
+    justify-content: right;
+}
+
+#main .view .commonBtn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.modalContent {
+    position: relative;
+}
+
+.modalVisual .modalChartContainer {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.modalVisual .modal_table_data_wrap {
+    flex: 1.7;
+}
+
+
+.modal_close {
+    display: block;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    text-indent: -9999999px;
+    width: 24px;
+    height: 24px;
+    background: url(/images/close.png) no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+
+
+/* 21-12-20 수정 */
+#main .mab_top_bar {
+	padding-bottom: 20px;
+	margin-bottom: 50px;	
+}
+
+
+#main .data_table_section .data_table_title {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+#main .mab_top_bar select,
+#main .mab_top_bar input,
+#main .mab_top_bar span,
+#main .mab_top_bar a {
+	font-size: 14px;
+	font-weight: 700;
+} 
+
+
+
+
+
+
+/* .download_btn_wrap */
+.download_btn_wrap {
+	display: flex;
+    align-items: center;
+}
+
+#main .downloadSelectBox {
+    width: 140px;
+    height: 40px;
+    border: 1px solid #E6EBEE;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #fff url(../../images/select_arrow.png) no-repeat center right 12px/8px;
+    padding: 0 16px;
+}
+
+.download_btn_wrap .commonBtn.download {
+	width: 120px; 
+	border: none; 
+	margin: 0 10px 0 0;
+	border: 1px solid #4E4E4E; 
+	line-height: 38px; 
+	height: 40px;
+	text-align: center; 
+	font-size: 14px; 
+	border-radius: 4px; 
+	font-weight: 700; 
+	color: #4E4E4E;
+}
+
+
+
+
+
+.commonBtn.download {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+    background: #fff;
+    color: #4E4E4E;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#main .user_header .ui_list_wrap > .ui_list:nth-child(3) {
+   width: 22px;
+   height: 17px;
+   background: url('../../images/sign-out.svg') no-repeat;
+   margin-left: 10px;
+}
+
+
+

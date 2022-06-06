@@ -1,0 +1,15 @@
+diff a/CMS2/src/main/webapp/WEB-INF/view/login/login.jsp b/CMS2/src/main/webapp/WEB-INF/view/login/login.jsp	(rejected hunks)
+@@ -224,6 +224,13 @@
+     <div class="dim"></div>
+ </body>
+ <script type="text/javascript">
++	history.pushState(null, null, "/digit/login");
++	
++	window.onpopstate = function(event)
++	{
++		history.go(1);
++	};
++	
+ 	function popupShow(e)
+ 	{
+ 	    $(".member_pop").hide();

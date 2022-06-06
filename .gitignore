@@ -1,0 +1,9 @@
+/**/*.fa
+/**/*.gff
+/**/*.csv
+
+node_modules/
+.metadata/
+
+Servers/
+RemoteSystemsTempFiles/

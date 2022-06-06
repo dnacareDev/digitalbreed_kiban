@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.visualWrap{
+    display: flex;
+}
+
+
+/*----------------------*/
+/*           표         */
+/*----------------------*/
+.tableContainer{width: 400px;height: 490px;border: 1px solid #000;}
+.tableWrap{overflow: scroll;height: 490px;display: flex;}
+.tableWrap table {width: 100%; height: 100%;}
+.tableWrap th {display: block; width: 90px; text-align: center; margin-right: 1px; border-left: 1px solid #E3E3E3; font-size: 15px;}
+.tableWrap tr {display: flex; align-items: center; background-color: #fff; height: 50px;}
+.tableWrap thead tr:first-child {border: 1px solid #E3E3E3; background: #F7F7F7; padding: 15px 0;}
+.tableWrap td {display: block; width: 90px; height: 50px; text-align: center; margin-right: 1px; line-height: 48px; font-size: 15px;}
+
+
+
+
+/*----------------------*/
+/*         차트         */
+/*----------------------*/
+.chartArea{}
+.chartInput{}
+.chartContainer{width: 800px;height: 490px;border: 1px solid #000;}
+.chartWrap{overflow: scroll;height: 490px;display: flex;}
+.chartElName{height: 100%;display: flex;flex-direction: column;align-items: center;min-width: 36px;max-width: 36px;}
+.chartEl{width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.1);position: relative;}
+.chartStack{width: 100%;height: 3px;position: absolute;left: 0;}
+.chartStackName{cursor: pointer;position: absolute;left: 80px;font-size: 10px;}
+.chartStackLine{position: absolute;height: 1px;border-top: 1px solid #000;transform-origin: 0 0;left: 38px;}
+.stackAni{animation: stackOpacity 3s infinite forwards;}
+@keyframes stackOpacity{0%{opacity: 1;}50%{opacity: 0.3;}100%{opacity: 1;}}
+
+
+
+
+
+
+
+/*----------------------*/
+/*         모달         */
+/*----------------------*/
+.modalWrap{position: fixed;top: 0;left: 0;   /* display: flex; */display: none;align-items: center;justify-content: center;width: 100vw;height: 100vh;
+}
+.modalBg{position: absolute;top: 0; left: 0;width: 100vw;height: 100vh;background-color: rgba(0, 0, 0, 0.2);}
+.modalContent{padding: 25px 35px 35px;width: 816px;height: 850px;background: #EEF2F5;z-index: 2;}
+.modalHeader{display: flex;justify-content: space-between;}
+.modalVisual{display: flex;width: 100%;height: 100%;justify-content: space-between;}
+.modalChartContainer{padding: 20px; width:30%; height: 90%; display: flex;background: #fff;border-radius: 20px;}
+.modalChartWrap{ width: 100%; height: 634px;display: flex;padding: 0 20px 20px;position: relative;overflow: scroll;}
+.modalChartCtl{display: flex;flex-direction: column;margin-right: 20px; max-width: 23px;}
+.modalChartCtl button{width: 23px; height: 23px;}
+.modalChartCtl input{transform: rotate(-90deg) translate(-100px, -76px);}
+.modalChart{height: 100%; transform-origin: 0 0; margin-bottom: 30px;}
+.modalChartEl{width: 36px;height: 634px;background-color: rgba(0, 0, 0, 0.1);position: relative;}
+
+.modal_table_data_wrap{width: 68%;height: 90%;display: flex;flex-direction: column;justify-content: space-between;}
+.modalTable{width: 100%;height: 48%;background: #fff;border-radius: 20px;padding: 23px;overflow: scroll;}
+.modalData{width: 100%;height: 48%;background: #fff;border-radius: 20px;}
+.modalTable table {width: 100%; height: 100%; overflow-y: scroll;}
+.modalTable th {display: block; width: 90px; text-align: center; margin-right: 1px; border-left: 1px solid #E3E3E3; font-size: 15px;}
+.modalTable tr {display: flex; align-items: center; background-color: #fff; height: 50px;}
+.modalTable thead tr:first-child {border: 1px solid #E3E3E3; background: #F7F7F7; padding: 15px 0;}
+.modalTable td {display: block; width: 90px; height: 50px; text-align: center; margin-right: 1px; line-height: 48px; font-size: 15px;}
+.modalTable tbody{height: 100%;}
+.modalSlider {-webkit-appearance: none;width: 174px;height: 10px;border-radius: 5px;  background: #fff;border: 1px solid #E6EBEE;outline: none;}
+.modalClickName{color:#397FF4; background-color: #EEF2F5; font-weight: bold;}
+
+
+
+
+.cloneParent{padding-top: 1000px;display: flex;align-items: flex-end;}

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.HomeMapper">
+	<!-- 알림 조회 -->
+	<select id="SelectNotice" resultType="kr.or.ih.api.entity.Notice">
+		SELECT * FROM notice n
+		LEFT JOIN outcome o ON n.outcome_id = o.outcome_id
+		WHERE o.user_username = #{user_username} AND notice_type = 1
+	</select>
+	
+	<!-- 알림 삭제 -->
+	<delete id="DeleteNotice">
+		DELETE n FROM notice n
+		LEFT JOIN outcome o ON n.outcome_id = o.outcome_id
+		WHERE n.outcome_id = #{outcome_id} AND o.user_username = #{user_username}
+	</delete>
+	
+	<select id="SelectFirstCount" parameterType="String" resultType="kr.or.ih.api.entity.Counts">
+		SELECT
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 1 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS map,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 2 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS poly,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 3 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS mabc,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 4 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS phylogeny,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 5 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS spec,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 6 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS qtl,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 7 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS ngs,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 8 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS snp,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 9 AND create_date BETWEEN DATE(NOW()) AND DATE(DATE_ADD(NOW(), INTERVAL 1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS userresult
+	</select>
+	
+	<select id="SelectSecondCount" parameterType="String" resultType="kr.or.ih.api.entity.Counts">
+		SELECT
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 1 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS map,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 2 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS poly,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 3 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS mabc,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 4 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS phylogeny,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 5 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS spec,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 6 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS qtl,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 7 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS ngs,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 8 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS snp,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 9 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -1 DAY)) AND DATE(NOW())
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS userresult
+	</select>
+	
+	<select id="SelectThirdCount" parameterType="String" resultType="kr.or.ih.api.entity.Counts">
+		SELECT
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 1 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS map,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 2 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS poly,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 3 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS mabc,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 4 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS phylogeny,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 5 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS spec,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 6 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS qtl,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 7 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS ngs,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 8 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS snp,
+		(SELECT COUNT(*) FROM analysis
+		WHERE analysis_type = 9 AND create_date BETWEEN DATE(DATE_ADD(NOW(), INTERVAL -2 DAY)) AND DATE(DATE_ADD(NOW(), INTERVAL -1 DAY))
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS userresult
+	</select>
+	
+	<select id="SelectTotalCount" parameterType="String" resultType="kr.or.ih.api.entity.Counts">
+		SELECT
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 1
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS map,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 2
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS poly,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 3
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS mabc,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 4
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS phylogeny,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 5
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS spec,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 6
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS qtl,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 7
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS ngs,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 8
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS snp,
+		(SELECT COUNT(*) FROM outcome
+		WHERE outcome_type = 9
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>) AS userresult
+	</select>
+	
+	<select id="SelectFileCount" parameterType="String" resultType="kr.or.ih.api.entity.Counts">
+		SELECT
+		(SELECT IFNULL(COUNT(*), 0) FROM outcome
+		<choose>
+			<when test="user_username != 'admin'">
+				WHERE user_username = #{user_username}
+			</when>
+		</choose>
+		) AS total_file,
+		(SELECT IFNULL(COUNT(*), 0) FROM outcome
+		WHERE outcome_file_status = 0
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>
+		) AS raw_file,
+		(SELECT IFNULL(COUNT(*), 0) FROM outcome
+		WHERE outcome_file_status = 1
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>
+		) AS download_file
+	</select>
+</mapper>

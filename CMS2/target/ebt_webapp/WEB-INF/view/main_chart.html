@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Map</title>
+    <link rel="stylesheet" href="./css/main_chart/style.css">
+</head>
+<body>
+    <!-- 그래프 -->
+    <div class="visualWrap">
+        <!-- 위쪽 -->
+        <div class="upSide">
+            <div>일별 분석 상황</div>
+            <canvas id="lineChart"></canvas>
+        </div>
+        <!-- 아래쪽 -->
+        <div class="downSide">
+            <div class="wrapper">
+                <div>결과확인 상태</div>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="wrapper">
+                <div>고객별 분석현황</div>
+                <canvas id="stackChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/xlsxCdn.js"></script>
+    <script type="module" src="./js/main_chart/main_chart.js"></script>
+</body>
+</html>

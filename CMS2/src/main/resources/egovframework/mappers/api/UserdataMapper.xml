@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.UserdataMapper">
+	<!--  -->
+	<select id="SelectOutcomeCount" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM outcome o
+		LEFT JOIN marker m ON o.marker_id = m.marker_id
+		WHERE o.outcome_type = 9 AND o.outcome_status != 0
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>
+	</select>
+
+	<!--  -->
+	<select id="SelectOutcomeList" parameterType="String" resultType="kr.or.ih.api.entity.Outcome">
+		SELECT * FROM outcome o
+		LEFT JOIN marker m ON o.marker_id = m.marker_id
+		WHERE o.outcome_type = 9 AND o.outcome_status != 0
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>
+		ORDER BY o.create_date DESC
+		LIMIT #{offset}, #{limit}
+	</select>
+
+	<!--  -->
+	<select id="SelectOutcomeDetail" parameterType="int" resultType="kr.or.ih.api.entity.Outcome">
+		SELECT * FROM outcome o
+		LEFT JOIN marker m ON o.marker_id = m.marker_id
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE o.outcome_id = #{outcome_id}
+	</select>
+		
+	<select id="SelectMarker" parameterType="int" resultType="kr.or.ih.api.entity.Marker">
+		SELECT * FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE m.marker_id = #{marker_id}
+	</select>
+	
+	<select id="SelectOutcome" parameterType="int" resultType="kr.or.ih.api.entity.Outcome">
+		SELECT * FROM outcome
+		WHERE outcome_id = #{outcome_id}
+	</select>
+	
+	<select id="SelectMarkerFile" parameterType="int" resultType="kr.or.ih.api.entity.Marker">
+		SELECT * FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE m.marker_id = #{marker_id} AND (mf.marker_file_type = 1 OR mf.marker_file_type = 2 OR mf.marker_file_type = 3)
+	</select>
+	
+	<select id="SelectCrop" resultType="kr.or.ih.api.entity.Crop">
+		SELECT * FROM crop
+	</select>
+</mapper>

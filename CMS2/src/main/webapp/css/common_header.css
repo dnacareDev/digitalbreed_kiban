@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* logo */
+#header .logo1 {padding-left: 0px; padding-right: 10px}
+#header .logo1 > a {display: block; text-align: left; cursor: pointer; margin-bottom: 40px; margin-left: -10px}
+
+/* nav */
+/* out - list */
+#nav .out_list_wrap .out_list {font-weight: 700; margin-bottom: 20px; cursor: pointer;}
+#nav .out_list_wrap .out_list:last-child {margin-bottom: 0px;}
+#nav .out_list_wrap .out_list .out_list_text {margin-bottom: 10px; display: inline-block; padding-right: 20px; position: relative; padding-left: 20px;}
+#nav .out_list_wrap .out_list .out_list_text:not(:last-child):after {content: ''; position: absolute; top: 8px; right: 0; width: 11px; height: 7px; background: url(../../images/list_arrow.png) no-repeat; background-size: 100%; transform: rotate(180deg); -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg);}
+
+/* on */
+#nav .out_list_wrap .out_list.on .out_list_text:not(:last-child):after {top: 8px; transform: rotate(0deg); -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg);}
+
+/* inner - list */
+#nav .out_list_wrap .out_list > .inner_list_wrap {height: 0; overflow: hidden; opacity: 0; transition: 0.3s all; -webkit-transition: 0.3s all; -ms-transition: 0.3s all; -moz-transition: 0.3s all; -o-transition: 0.3s all;}
+#nav .out_list_wrap .out_list > .inner_list_wrap_admin {height: 0; overflow: hidden; opacity: 0; transition: 0.3s all; -webkit-transition: 0.3s all; -ms-transition: 0.3s all; -moz-transition: 0.3s all; -o-transition: 0.3s all;}
+
+/* out - list .on */
+#nav .out_list_wrap .out_list:first-child.on > .inner_list_wrap {height: 260px; overflow: hidden; opacity: 1;}
+#nav .out_list_wrap .out_list:nth-child(2).on > .inner_list_wrap {height: 80px; overflow: hidden; opacity: 1;}
+
+
+#nav .out_list_wrap .out_list:first-child.on > .inner_list_wrap_admin {height: 370px; overflow: hidden; opacity: 1;}
+#nav .out_list_wrap .out_list:nth-child(2).on > .inner_list_wrap_admin {height: 80px; overflow: hidden; opacity: 1;}
+
+
+#nav .out_list_wrap .out_list > .inner_list_wrap .inner_list > a {display: block; font-size: 14px; color: #4E4E4E; font-weight: 700; padding: 10px 0; padding-left: 20px; cursor: pointer; transition: 0.2s all; -webkit-transition: 0.2s all; -ms-transition: 0.2s all; -moz-transition: 0.2s all; -o-transition: 0.2s all;}
+#nav .out_list_wrap .out_list > .inner_list_wrap .inner_list > a > span {color: #CCCCCC; font-weight: 400; letter-spacing: -0.025em; font-size: 14px;}
+
+#nav .out_list_wrap .out_list > .inner_list_wrap_admin .inner_list > a {display: block; font-size: 14px; color: #4E4E4E; font-weight: 700; padding: 10px 0; padding-left: 20px; cursor: pointer; transition: 0.2s all; -webkit-transition: 0.2s all; -ms-transition: 0.2s all; -moz-transition: 0.2s all; -o-transition: 0.2s all;}
+#nav .out_list_wrap .out_list > .inner_list_wrap_admin .inner_list > a > span {color: #CCCCCC; font-weight: 400; letter-spacing: -0.025em; font-size: 14px;}
+
+
+/* active */
+#nav .out_list_wrap .out_list > .inner_list_wrap .inner_list.active > a {background-color: #397FF4; color: #fff; border-radius: 8px; -webkit-border-radius: 8px;}
+#nav .out_list_wrap .out_list > .inner_list_wrap_admin .inner_list.active > a {background-color: #397FF4; color: #fff; border-radius: 8px; -webkit-border-radius: 8px;}
+
+
+#wrap #header {
+    padding: 24px 15px 0 20px;
+}
+
+#nav .out_list_wrap .out_list .out_list_text {
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+#nav .out_list_wrap .out_list > .inner_list_wrap .inner_list > a {
+    padding-left: 5px;
+}
+
+#nav .out_list_wrap .out_list > .inner_list_wrap_admin .inner_list > a {
+    padding-left: 5px;
+}

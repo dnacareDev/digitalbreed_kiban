@@ -1,0 +1,56 @@
+@media screen and (max-width:1600px){
+    
+}
+
+@media screen and (max-width: 1200px) {
+    #main .result_table_section {overflow-x: auto;}
+
+    /* table 공통 */
+    #main .result_table_section .result_data_table .table_head,
+    #main .result_table_section .result_data_table .table_list {font-size: 14px;}
+
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2n-1) > select,
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2n-1) > textarea#notice{width: 100%; min-width: 260px; max-width: 320px;}
+
+    .dimm.on .new_result_box .result_form_box > .data_box > .new_data_box > label {font-size: 12px;}
+    .dimm.on .new_result_box .result_form_box > .data_right_box > .new_data_box > label {margin-bottom: 10px; margin-top: 3px;}
+    .dimm.on .new_result_form .data_box > .new_data_box > label.select_arrow {width: 100%; max-width: 320px;}
+
+    .dimm.on .new_result_form .data_right_box .new_data_box:nth-child(2) {margin-bottom: 10px;}
+    .dimm.on .new_result_form .new_data_box:nth-child(2) > .input_box > .file_title {font-size: 12px; padding: 9px 10px 9px 40px;}
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2) > .file_btn {margin-top: 26px;}
+
+    .dimm.on .new_result_box .result_form_box > .data_box .new_data_box .select_arrow:after {top: 45px;}
+}
+
+@media screen and (max-width: 1000px) {
+    #main .result_table_section {overflow-x: auto;}
+
+    /* table 공통 */
+    #main .result_table_section .result_data_table .table_head,
+    #main .result_table_section .result_data_table .table_list {font-size: 14px;}
+
+
+    .dimm.on {padding: 90px 22px;}
+    .dimm.on .new_result_form .data_right_box > .new_data_box {margin-left: 0;}
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2n-1) > select,
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2n-1) > textarea#notice{width: 100%; min-width: 120px; max-width: 100%;}
+
+    .dimm.on .new_result_form .data_right_box > .new_data_box > select {height: 32px;}
+
+    .dimm.on .new_result_box .result_form_box > .data_box > .new_data_box > label {font-size: 12px;}
+    .dimm.on .new_result_box .result_form_box > .data_right_box > .new_data_box > label {margin-bottom: 10px; margin-top: 3px;}
+    .dimm.on .new_result_form .data_box > .new_data_box > label.select_arrow {width: 100%; max-width: 100%;}
+
+    .dimm.on .new_result_form .data_right_box .new_data_box:nth-child(2) {margin-bottom: 10px;}
+    .dimm.on .new_result_box .new_data_box:nth-child(2) > .input_box > .file_title {font-size: 12px; line-height: 1; overflow-x: hidden; text-overflow: ellipsis; white-space:nowrap;}
+    .dimm.on .new_data_box:nth-child(2) > .input_box > .file_title:before {left: 15px; width: 17px; height: 19px;}
+
+    .dimm.on .new_result_form .data_right_box > .new_data_box:nth-child(2) > .file_btn {margin-top: 25px;}
+
+    .dimm.on .new_result_box .result_form_box > .data_box .new_data_box .select_arrow:after {top: 41px;}
+
+    /*** dimm - form - btn ***/
+    .dimm.on .new_result_box .new_result_form .canel_save_btn {bottom: 40px; right: 50%; transform: translateX(50%);}
+}
+

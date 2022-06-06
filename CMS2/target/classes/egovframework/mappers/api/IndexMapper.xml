@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.IndexMapper">
+	<select id="SelectMarkerList" resultType="kr.or.ih.api.entity.Marker">
+		SELECT * FROM marker m
+		LEFT JOIN marker_file mf ON m.marker_id = mf.marker_id
+		WHERE m.marker_status = 1 AND mf.marker_file_type = 1
+		ORDER BY m.CREATE_DATE DESC
+	</select>
+	
+	<select id="SelectOutcomeList" resultType="kr.or.ih.api.entity.Outcome">
+		SELECT * FROM outcome o
+		LEFT JOIN marker m ON o.marker_id = m.marker_id
+		<choose>
+			<when test="type == 1">
+				WHERE o.outcome_type = 1 AND o.outcome_status = 1
+			</when>
+			<when test="type == 2">
+				WHERE o.outcome_type = 2 AND o.outcome_status != 0
+			</when>
+			<when test="type == 3">
+				WHERE o.outcome_type = 3 AND o.outcome_status != 0
+			</when>
+			<when test="type == 4">
+				WHERE o.outcome_type = 4 AND o.outcome_status != 0
+			</when>
+			<when test="type == 5">
+				WHERE o.outcome_type = 5 AND o.outcome_status != 0
+			</when>
+			<when test="type == 6">
+				WHERE o.outcome_type = 6 AND o.outcome_status != 0
+			</when>
+			<when test="type == 7">
+				WHERE o.outcome_type = 7 AND o.outcome_status != 0
+			</when>
+			<when test="type == 8">
+				WHERE o.outcome_type = 8 AND o.outcome_status != 0
+			</when>
+			<when test="type == 9">
+				WHERE o.outcome_type = 9 AND o.outcome_status != 0
+			</when>
+		</choose>
+		<choose>
+			<when test="user_username != 'admin'">
+				AND user_username = #{user_username}
+			</when>
+		</choose>
+		ORDER BY o.create_date DESC 
+	</select>
+	
+	<update id="UpdateOutcomeFileStatus" parameterType="int">
+		UPDATE outcome
+		SET outcome_file_status = 1
+		WHERE outcome_id = #{outcome_id}
+	</update>
+	
+	<insert id="InsertAnalysis">
+		INSERT INTO analysis
+		(user_username, analysis_type, create_date, modify_date)
+		VALUES
+		(#{user_username}, #{type}, NOW(), NOW())
+	</insert>
+</mapper>

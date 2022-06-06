@@ -1,0 +1,333 @@
+#login_header{
+	max-width: 1130px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 24px 40px;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0;
+}
+    
+.clearfix::before{
+    content: "";
+    display: block;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.background-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    background: url(../../images/loginBackground.png) no-repeat bottom center;
+    background-size: cover;
+    z-index: -1;
+}
+.login_section{
+    z-index: 2;
+}
+.container_table{
+    display: table;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    position: relative;
+}
+.container_inner{
+    display: table-cell;
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    vertical-align: middle;
+}
+.container_cover{
+    max-width: 1094px;
+    margin: 0 auto;
+    border-radius: 33px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(29, 80, 175, 0.09);
+}
+.contents{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 133px;
+    position: relative;
+}
+.contents .login_title{
+    padding-bottom: 25px;
+}
+.contents .login_title h3{
+    font-size: 77px;
+    color: #397FF4;
+    font-weight: 500;
+}
+.btn_cover{
+    width: 100%;
+    padding: 50.5px;
+}
+span.close{
+    float: right;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+span.close::before, span.close::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #808DD6;
+    bottom: 50%;
+
+}
+span.close::after{
+    left: 0;
+    transform: rotate(45deg);
+}
+span.close::before{
+    right:  0;
+    transform: rotate(-45deg);
+}
+.form_list{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+input[type="email"], input[type="password"], input[type="text"]{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F4F8FF;
+    padding: 0 7px;
+    color: #343434;
+}
+span.sub_title{
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6F6F6F;
+    margin-bottom: 5px;
+    margin-top: 13px;
+}
+.box_input{
+    width: calc((80% - 24px)/1);
+    float: left;
+}
+.submit_btn{
+    width: calc((24.8% - 24px)/1);
+    float: left;
+    margin-left: 24px;
+    margin-top: 45px;
+    height: 125px;
+
+}
+input[type="submit"],input[type="button"],button[type="button"]{
+    width:100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #397FF4;
+    vertical-align: top;
+    border: 1px solid #0563FF;
+    color: #fff;
+
+}
+.link_list{
+    clear:both;
+    margin-top: 24px;
+    float: left;
+    width: 100%;
+}
+.link_list a.member{
+    font-size: 17px;
+    color: #397FF4;
+    font-weight: 700;
+    float: left;
+}
+.link_list a.psSch{
+    float: right;
+    color: #BFBFBF;
+    font-size: 17px;
+    font-weight: 700;
+}
+.dim{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 10;
+}
+.member_pop{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+}
+.member_pop_table{
+    display: table;
+    width: 100%;
+    height: 100vh;
+}
+.member_pop .member_pop_inner{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100vh;
+}
+.member_pop .member_pop_inner .member_pop_cover{
+    max-width: 576px;
+    margin: 0 auto;
+    background-color: #fff;
+   /* padding: 16px 112px 36px;*/
+    padding: 16px 0 36px; 
+}
+.member_content{
+    padding: 0 112px;
+}
+.member_title h4{
+    color: #397FF4;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+}
+.member_btn_cover{
+    width: 100%;
+    text-align: right;
+    padding: 0 16px;
+}
+.member_btn_cover span.member_close{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    border:2px solid #6F6F6F;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.member_btn_cover span.member_close::before, .member_btn_cover span.member_close::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70%;
+    height: 2px;
+    background-color: #6F6F6F;
+    bottom: 50%;
+    top: 10px;
+}
+.member_btn_cover span.member_close::before{
+    right:  3px;
+    transform: rotate(-45deg);
+}
+.member_btn_cover span.member_close::after{
+    left: 3px;
+    transform: rotate(45deg);
+}
+
+.member_submit{
+    margin-top: 32px;
+    text-align: center;
+}
+.member_submit button[type="button"]{
+    padding: 7px 25px;
+    width:auto;
+}
+.msg{
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 24.2px;
+}
+.msg.active{
+    display: block;
+}
+span.pwd_false{
+    color:#FF7777;
+    font-size: 14px;
+}
+.member_pop3 .member_submit{
+    margin-top: 22.3px;
+}
+    
+@media only screen and (max-width: 1094px){
+    .container_inner {
+	    padding: 0 15px;
+	    padding-top: 150px;
+	}
+    .form_list{
+        padding: 0 13px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .box_input{
+        width: 100%;
+        float:none;
+    }
+    .submit_btn{
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        height: 51px;
+        margin-top: 35px;
+    }
+    /*
+    .link_list{
+        clear:both;
+        margin-top: 41px;
+        float: none;
+        text-align: center;
+    }
+    .link_list a.member{
+        float: none;
+        position: relative;
+        vertical-align: top;
+    }
+    .link_list a.member::after{
+        position: absolute;
+        content: "";
+        right: -8px;
+        top: 6px;
+        width: 1px;
+        height: 10px;
+        display: block;
+        background-color: #E3E3E3;
+        border-radius: 50px;
+    }
+    .link_list a.psSch{
+        float: none;
+        margin-left: 10px;
+        vertical-align: top;
+    }*/
+    .contents .login_title h3{
+        font-size:44px;
+    }
+    span.close{
+        width: 16.25px;
+        height:16.25px;
+    }
+    .btn_cover{
+        padding: 29.5px 26.5px 39.9px;
+    }
+    #login_header{
+    	max-width: 100%;
+        text-align: center;
+        padding:10px 50px 10px 15px;
+    }
+    .member_content{
+        padding: 0 15px;
+    }
+}

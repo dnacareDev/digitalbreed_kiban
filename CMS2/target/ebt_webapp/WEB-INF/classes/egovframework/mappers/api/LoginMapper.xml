@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.api.service.mapper.LoginMapper">
+	<select id="SelectUser" resultType="kr.or.ih.api.entity.User">
+		SELECT * FROM user
+		WHERE user_username = #{user_username} AND user_password = #{user_password}
+	</select>
+	
+	<select id="CheckUsername" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM user
+		WHERE user_username = #{user_username}
+	</select>
+	
+	<insert id="Join" parameterType="kr.or.ih.api.entity.User">
+		INSERT INTO user
+		(user_username, user_password, user_status, user_type, create_date, modify_date)
+		VALUES
+		(#{user_username}, #{user_password}, 1, 1, NOW(), NOW())
+	</insert>
+	
+	<!--  -->
+	<update id="UpdatePassword">
+		UPDATE user
+		SET user_password = #{user_password}
+		WHERE user_username = #{user_username}
+	</update>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.or.ih.cms.service.mapper.LoginMapper">
+	
+	<!-- ADMIN 계정조회 -->
+	<select id="selectAdminByAdminIdPwd" resultType="egovMap">
+		SELECT    A.ADMIN_XID, A.ADMIN_PWD
+		FROM      TB_ADMIN A
+		WHERE     ADMIN_ID = #{adminId} 
+		AND       ADMIN_PWD = SHA2(#{adminPwd}, '256')
+	</select>
+	
+</mapper>

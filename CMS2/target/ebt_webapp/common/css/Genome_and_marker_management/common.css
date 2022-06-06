@@ -1,0 +1,164 @@
+@charset "utf-8";
+#wrap {background-color: #F2F4FA; min-height: 100vh; padding: 24px 24px 10px 0; display: flex; overflow: hidden; position: relative; overflow-y: auto;}
+
+/* header, main 공통 */
+#header, #main {height: 100%;}
+
+/***** header *****/
+#header {width: 332px; flex: 1; padding: 24px 32px 0 24px;}
+
+
+
+/***** main *****/
+#main {width: calc(100% - 332px); flex: 6; background-color: #fff;  -webkit-border-radius: 50px 50px 0 0; border-radius: 50px 50px 0 0; padding: 56px 42px 23px 32px; height: 100%;}
+
+/* user header */
+#main .user_header {height: 40px; display: flex; justify-content: space-between; margin-bottom: 32px;}
+
+/* user_ui */
+#main .user_header .ui_list_wrap {display: flex; align-items: center;}
+#main .user_header .ui_list_wrap > .ui_list {cursor: pointer;}
+#main .user_header .ui_list_wrap > .ui_list:not(:last-child) {margin: 0 10px;}
+#main .user_header .ui_list_wrap > .ui_list:nth-child(1) {font-size: 14px; height: 22px; color: #397FF4; font-weight: 700; padding-right: 15px; position: relative;}
+#main .user_header .ui_list_wrap > .ui_list:nth-child(1):before {content: ''; position: absolute; width: 8px; height: 8px; right: 0; top: 6px; background: url(../../images/arrow.png) no-repeat; background-size: 100%;}
+#main .user_header .ui_list_wrap > .ui_list:nth-child(2) {width: 28px; height: 28px; background-color: #BFBFBF; border-radius: 50%; -webkit-border-radius: 50%;}
+#main .user_header .ui_list_wrap > .ui_list:nth-child(3) {width: 18px; height: 22px; background: url(../../images/arlam.png) no-repeat; background-size: 100%;}
+#main .user_header .ui_list_wrap > .ui_list:nth-child(4) {width: 22px; height: 22px; background: url(../../images/setting.png) no-repeat; background-size: 100%; margin-left: 10px;}
+
+/* data table section */
+#main .data_table_section {overflow-y: hidden; overflow-x: auto;}
+#main .data_table_section .data_table_title {margin-bottom: 25px; font-weight: bold;}
+#main .data_table_section .dat_table {width: 100%; border: 1px solid #E3E3E3; margin-bottom: 30px;}
+
+/* table 공통 */
+#main .data_table_section .dat_table .table_head,
+#main .data_table_section .dat_table .table_list {border-top: 1px solid #E3E3E3; text-align: center; max-width: 240px; min-width: 160px; vertical-align: middle; position: relative;}
+
+#main .data_table_section .dat_table .table_head:not(:last-child):before,
+#main .data_table_section .dat_table .table_list:not(:last-child):before {content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 63px; background-color: #E3E3E3;}
+
+
+/* table header */
+#main .data_table_section .dat_table .table_row_header {background-color: #F7F7F7;}
+#main .data_table_section .dat_table .table_head {padding: 15px 10px 20px;}
+#main .data_table_section .dat_table .table_head .head_title {display: block; margin-bottom: 10px;}
+#main .data_table_section .dat_table .table_head > label > .data_input {border:1px solid #E3E3E3; border-radius: 4px; -webkit-border-radius: 4px; height: 30px; max-width: 190px;}
+
+/* table body */
+#main .data_table_section .dat_table .table_list {height: 62px; color: #6F6F6F;}
+#main .data_table_section .dat_table .table_list:not(:last-child):before {height: 30px;}
+
+/* table index && prev, next btn */
+#main .data_table_section .table_page_wrap {display: flex; justify-content: center; margin-bottom: 30px;}
+
+/* table idx */
+#main .data_table_section .table_page_wrap .table_idx {display: flex; padding-top: 2px;}
+#main .table_page_wrap .table_idx .table_idx_num {padding: 0 15px; }
+#main .table_page_wrap .table_idx .table_idx_num .idx_num {font-size: 18px; color: #9AC0FF; cursor: pointer; transition: 0.2s all; -webkit-transition: 0.2s all; -ms-transition: 0.2s all; -moz-transition: 0.2s all; -o-transition: 0.2s all;}
+
+/* idx - active */
+#main .table_page_wrap .table_idx .table_idx_num.active .idx_num {color: #397FF4; font-weight: 700; font-size: 19px; line-height: 1.55rem;}
+
+/* table btn */
+#main .data_table_section .table_page_wrap .table_idx_btn {padding: 5px 12px; color: #397FF4; background-color: #fff; border: 1px solid #D1D1D1; margin: 0 15px; border-radius: 4px; -webkit-border-radius: 4px;}
+
+#main .data_table_section .table_page_wrap .table_idx_btn:active:focus {background-color: rgb(236, 236, 236);}
+
+/* retouch && new btn */
+#main .btn_wrap {text-align: right;}
+
+/* btn 공통 */
+#main .btn_wrap .same_btn {height: 50px; width: 107px; border-radius: 4px; -webkit-border-radius: 4px; background-color: #fff; font-size: 17px; font-weight: bold; transition: 0.1s all; -webkit-transition: 0.1s all; -ms-transition: 0.1s all; -moz-transition: 0.1s all; -o-transition: 0.1s all;}
+
+#main .btn_wrap .re_btn {border: 1px solid #5796FF; color: #5796FF; margin-right: 5px;}
+#main .btn_wrap .new_btn {color: #fff; background-color: #397FF4;} 
+
+/* active, focus */
+#main .btn_wrap .re_btn:active:focus {background-color: #f3f6fc;}
+#main .btn_wrap .new_btn:active:focus {background-color: #1D50AF;}
+
+
+/***** dimmed *****/
+.dimm {display: none;} 
+.dimm.on {display: block; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 9999; padding: 120px 60px; display: flex; justify-content: center; align-items: center;}
+.dimm.on .new_win_box {max-width: 910px; width: 100%; min-height: 690px; height: 100%; background-color: #EEF2F5; border-radius: 4px; -webkit-border-radius: 4px; padding: 25px; position: relative;}
+
+.dimm.on .new_win_box .new_win_title {font-size: 20px; color: #397FF4; margin-bottom: 20px; font-weight: bold;}
+
+/* dimm close */
+.dimm.on .new_win_box .win_close {position: absolute; right: -30px; top: -30px; text-indent: -9999999px; width: 24px; height: 24px; background: url(../../images/close.png) no-repeat; background-size: 100%;} 
+  
+
+/* dimm form */
+.dimm.on .new_win_box .new_data_form {max-width: 830px; width: 100%; background-color: #fff; margin: 0 auto; height: calc(100% - 80px); border-radius: 15px; -webkit-border-radius: 15px; padding: 28px 53px; display: flex; flex-direction: column;}
+
+.dimm.on .new_win_box .new_data_form .data_form_box {display: flex;}
+
+.dimm.on .new_win_box .new_data_form .data_box {width: 50%;}
+.dimm.on .new_win_box .new_data_form .data_box .new_data_box { width: 100%; margin-bottom: 10px;}
+
+/* dimm form 공통*/
+
+
+.dimm.on .new_win_box .new_data_form .data_left_box > .new_data_box > label {font-size: 14px; margin-bottom: 10px;}
+.dimm.on .new_win_box .new_data_form .data_box .new_data_box > input,
+.dimm.on .new_win_box .new_data_form .data_box .new_data_box > .input_box > input,
+.dimm.on .new_win_box .new_data_form .data_box .new_data_box > textarea, 
+.dimm.on .new_win_box .new_data_form .data_box .new_data_box > select {border: 1px solid #707070;  display: block; border-radius: 4px; -webkit-border-radius: 4px; padding-left: 10px;}
+
+.dimm.on .new_win_box .new_data_form .new_data_box > input,
+.dimm.on .new_win_box .new_data_form .new_data_box > .input_box > input,
+.dimm.on .new_win_box .new_data_form .new_data_box > select {height: 40px;}
+
+.dimm.on .new_win_box .new_data_form .data_left_box > .new_data_box:nth-child(2n-1) > input[type="text"] {width: 100%;}
+.dimm.on .new_data_form .data_right_box > .new_data_box {display: flex; margin-left: 5px;}
+.dimm.on .new_data_form .data_right_box > .new_data_box:first-child > .input_box { overflow: hidden;}
+.dimm.on .data_right_box > .new_data_box > .input_box > p:not(:last-child) {font-size: 13px; float: right;}
+.dimm.on .data_right_box > .new_data_box > .input_box > p:first-child {font-size: 13px; float: left;}
+.dimm.on .data_right_box > .new_data_box > .input_box > p:last-child {margin-top: 28px;}
+
+
+/* textarea */
+.dimm.on .new_win_box .new_data_form .new_data_box > textarea {height: 112px; padding: 10px;}
+
+/* 파일 추가를 제외한 input, select, textarea */
+.dimm.on .new_win_box .new_data_form .new_data_box > input,
+.dimm.on .new_win_box .new_data_form .new_data_box > select,
+.dimm.on .new_win_box .new_data_form .new_data_box > textarea {max-width: 348px; width: 100%; margin-top: 5px;}
+
+/* 파일 추가 input */
+.dimm.on .new_win_box .new_data_form .new_data_box > .input_box {display: inline-block;  width: 252px;}
+
+/* 파일추가 제목, 예시 */
+.dimm.on .new_data_form .new_data_box > .input_box > .form_title,
+.dimm.on .new_data_form .new_data_box > .input_box > .form_ex {display: inline-block; font-size: 14px; font-weight: bold; color: #6F6F6F; margin-bottom: 10px;}
+
+.dimm.on .new_win_box .new_data_form .new_data_box > .input_box > p.form_ex {text-decoration: underline; color: #397FF4;}
+
+.dimm.on .new_win_box .new_data_form .new_data_box > .file_in[type="file"],
+.dimm.on .new_win_box .new_data_form .new_data_box > .input_box > .file_in[type="file"] { display: none;}
+
+/* 파일 추가 버튼(label) */
+.dimm.on .new_win_box .new_data_form .new_data_box .file_btn {line-height: 40px; width: 88px; background-color: #397FF4; display: inline-block; text-align: center; color: #fff; font-weight: bold; border-radius: 4px; -webkit-border-radius: 4px; margin-top: 28px; margin-left: 5px;}
+
+.dimm.on .new_win_box .new_data_form .new_data_box > .file_title,
+.dimm.on .new_win_box .new_data_form .new_data_box > .input_box > .file_title {width: 252px; height: 40px; border: 1px solid #707070; border-radius: 4px; -webkit-border-radius: 4px; padding: 9px 10px; font-size: 14px; color: #BFBFBF;}
+
+
+
+
+.dimm.on .new_win_box .new_data_form .new_data_box > select,
+.dimm.on .new_win_box .new_data_form .new_data_box > select > option {font-size: 14px; font-weight: 700; color: #6F6F6F;}
+
+.dimm.on .data_left_box > .new_data_box > .select_arrow {position: relative; display: block;}
+
+.dimm.on .data_left_box > .new_data_box > .select_arrow:after {content: ''; position: absolute; top: 47px; right: 30px; width: 7px; height: 6px; background: url(../../images/select_arrow.png) no-repeat; background-size: 100%; z-index: 111;}
+
+.dimm.on .new_win_box .canel_save_btn { display: block; width: 100%; text-align: right; padding-top: 20px;}
+.dimm.on .new_win_box .canel_save_btn .canel,
+.dimm.on .new_win_box .canel_save_btn .save {width: 88px; height: 40px; border-radius: 4px; -webkit-border-radius: 4px;}
+.dimm.on .new_win_box .canel_save_btn .canel {background-color: #fff; border: 1px #5796FF solid; color: #5796FF; font-weight: bold;}
+.dimm.on .new_win_box .canel_save_btn .save {background-color: #397FF4; color: #fff;}
+
+.dimm.on .new_win_box .canel_save_btn .canel:active:focus {background-color: #f3f6fc;}
+.dimm.on .new_win_box .canel_save_btn .save:active:focus {background-color: #1D50AF;}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#main .result_table_section .result_data_table .table_head:first-child,
+#main .result_table_section .result_data_table .table_list:first-child {
+    flex: 0.5;
+}
+
+#main .result_table_section .result_data_table .table_head:nth-child(5),
+#main .result_table_section .result_data_table .table_list:nth-child(5),
+#main .result_table_section .result_data_table .table_head:nth-child(4),
+#main .result_table_section .result_data_table .table_list:nth-child(4),
+#main .result_table_section .result_data_table .table_head:nth-child(3),
+#main .result_table_section .result_data_table .table_list:nth-child(3) {
+    flex: 1.5;
+}
+
+#main .result_table_section .result_data_table .table_head:nth-child(3),
+#main .result_table_section .result_data_table .table_list:nth-child(3),
+#main .result_table_section .result_data_table .table_head:nth-child(2),
+#main .result_table_section .result_data_table .table_list:nth-child(2) {
+    flex: 0.7;
+}

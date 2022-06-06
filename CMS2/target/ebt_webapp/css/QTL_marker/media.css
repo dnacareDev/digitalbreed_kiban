@@ -1,0 +1,461 @@
+
+@media screen and (max-width:1600px){
+    #header {display: none; position: fixed; top: 0; left: 0; background: #F2F4FA; z-index: 999; box-shadow: 0 0 10px rgba(1,1,1,0.1);}
+    #header.on {display: block;}
+    .tb_blank.on {display: block; position: fixed; width: 100%; height: 100%; z-index: 500;}
+    #wrap {padding: 12px 24px;}
+    .search_wrap {display: flex; align-items: center;}
+    .tb_menu_btn {display: block; cursor: pointer; margin-right: 30px;}
+    .tb_menu_btn span {display: block; width: 26px; height: 2px; background: #000; margin: 8px 0;}
+    
+    /* 21-12-15 추가 - css */
+    #main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .mab_top_bar {align-items: flex-start; justify-content: left; padding-bottom: 35px;  margin-bottom: 50px; flex-direction: column;}
+
+    .mab_bar_left,
+    .mab_bar_right {width: 100%; align-items: flex-start;}
+    .mab_bar_left {margin-bottom: 15px; flex-direction: column;}
+    .mab_bar_left:after {display: none;}
+
+    .mab_bar > .input_file_wrap {padding-top: 15px;}
+
+    .mab_bar_left .select_box {margin-bottom: 5px;}
+    .mab_bar_left .select_box > .type_select {width: 180px;}
+    .mab_bar_left .select_box > .type_select_info {width: 308px;}
+
+    .mab_bar_left .input_file_wrap .file_text {width: 400px;}
+
+    .mab_bar_right .input_file_wrap .file_text {width: 400px;}
+    .mab_bar > .input_file_wrap > .file_ex {top: -8px; left: 2px; font-size: 14px;}
+    
+    /* 21-12-15 추가 - css */
+     .mab_bar > .input_file_wrap {
+        padding-top: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #wrap {padding: 12px 0px 0px;}
+
+    /* main - header */
+    #main {padding: 0 0px 30px; overflow-y: auto;}
+    #main .user_header {background-color: #f2f4fa; padding: 50px 30px 30px; flex-direction: column-reverse; align-items: stretch; margin: 0 0 16px;}
+    
+    /* search */
+    #main .user_header .search_wrap {width: 100%; position: relative; display: flex; justify-content: right; top: 10px;}
+    #main .user_header .ui_list_wrap { position: relative; top: 10px;}
+    #main .user_header .ui_list_wrap > .ui_list {position: absolute;}
+    
+    #main .user_header .search_wrap > .tb_menu_btn {margin-right: 0px; margin-top: 2px;}
+    .tb_menu_btn span {display: block; width: 17px; height: 2px; margin: 5px 0;}
+    #main .user_header .search_wrap > label {position: absolute; right: 34px; top: 0px;}
+
+    /* search icon */
+    #main .user_header .search_wrap > label:before {top: 50%; transform: translateY(-50%); right: 25px; width: 20px; height: 20px;}
+
+    #main .user_header .search_wrap > label .search[type="text"] {border: 1px solid #E4E4E4; height: 30px; width: 0px; padding-left: 0px; opacity: 0;}
+
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(1) {height: 22px; left: 35px; bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(2) {bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(3) {width: 18px; height: 22px; right: 20px; bottom: -27px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(4) {display: none;}
+
+
+
+    .data_table_section {margin: 90px 20px 0px; border: 1px solid #E6EBEE; border-radius: 4px; -webkit-border-radius: 4px; padding: 16px; position: relative;}
+    
+
+    .mab_top_bar {align-items: flex-start; justify-content: left; padding-bottom: 0px;  margin-bottom: 50px; flex-direction: column; border: none;}
+    .mab_top_bar .give_info {bottom: -30px; left: 5px; font-size: 14px; color: #707070; font-weight: bold;}
+
+    .mab_bar_left,
+    .mab_bar_right {width: 100%; align-items: flex-start;}
+    .mab_bar_left {margin-bottom: 0px; flex-direction: column; margin-right: 0; padding-right: 0;}
+    .mab_bar_left:after {display: none;}
+
+    .mab_bar > .input_file_wrap {padding-top: 15px; width: 100%;}
+
+    .mab_bar_left .select_box {margin-bottom: 15px; width: 100%;}
+    .mab_bar_left .select_box > .type_select {width: calc(45% - 10px); padding: 0 10px; font-size: 14px;}
+    .mab_bar_left .select_box > .type_select_info {width: 55%; padding: 0 10px; font-size: 14px;}
+
+    .mab_bar_left .input_file_wrap .file_text {width: 400px;}
+
+    .mab_bar_right .input_file_wrap {flex-direction: column;}
+    .mab_bar_right .input_file_wrap .file_text {width: 100%; margin-bottom: 10px;}
+    .mab_bar > .input_file_wrap > .file_ex {top: -8px; left: 2px; font-size: 14px;}
+
+    .input_file_wrap .flie_btn_box {display: flex;}
+
+    /* 버튼 공통 */
+    #main .mab_bar_right .flie_btn_box > button {margin-left: 5px; width: 50%; font-size: 12px;}
+
+    #main .mab_bar_right .flie_btn_box > .file_add {width:50%; text-align: center; font-size: 12px; margin-left: 0;}
+    .mab_bar_right .flie_btn_box button.save { padding: 0 10px;}
+
+    /* 내려받기 버튼 - 회색 */
+    .mab_bar_right .flie_btn_box button.dawnload {padding: 0 10px; letter-spacing: -0.05em;}
+
+    /* .mab_top_bar button.view {position: absolute; right: auto; left: -17px; bottom: auto; top: -120px; width: 168px; height: 48px; font-size: 14px; border-radius: 4px;} */
+    .mab_top_bar div.view {width: 168px; height: 48px; font-size: 14px; font-weight: bold; text-align: center; display: flex; position: relative;}
+    .mab_top_bar div.view div{background: #397FF4;color: #fff; border: none; margin: 10px 6px 0 0;}
+
+
+    .mab_chr_wrap {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;}
+    .mab_chr_wrap_left {margin-right: 0; width: 100%; border: none; padding: 0; border-radius: 0; height: 680px;}
+    .data_table_section:after {content: ''; position: absolute; top: calc(50% + 125px); transform: translateY(-50%); left: 0; right: 0; height: 10px; width: 100%; background-color: #E6EBEE; z-index: 999;}
+    .mab_chr_wrap_right {border: none; width: 100%;}
+
+
+    .mab_chr_wrap_left .btn_all_box {margin-bottom: 20px; padding-right: 5px;}
+
+    /* btn - wrap */
+    .chr_btn_wrap {display: flex; align-items: center; justify-content: space-between; width: 100%;}
+    .chr_select_wrap {display: flex; align-items: center; justify-content: flex-end; margin-top: 12px; position: relative;}
+    .chr_btn_wrap p {font-size: 16px;}
+    .commonBtn {width: 75px; height: 40px; font-size: 14px; line-height: 40px; text-align: center; border: 1px solid #000; background: #fff; color: #4E4E4E; border-radius: 4px; cursor: pointer; font-weight: bold; margin: 0 0px 0 6px;  position: relative; z-index: 1;}
+    .commonBtn.active {width: 75px; background: #4E4E4E; color: #fff; border: none;}
+    .chr_select_wrap p {width: 20%; height: 40px; font-size: 14px; line-height: 38px; border: 1px solid #E6EBEE;
+        margin-right: 10px; text-align: center; border-radius: 4px;}
+    .chr_select_wrap select {width: 140px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; font-weight: bold;
+        background: #fff url('../../images/select_arrow.png') no-repeat center right 12px/8px; padding: 0 16px;}
+    .chr_select_wrap .commonBtn {width: 200px; border: none; margin: 0 0 0 10px; background: #fff; color: #4E4E4E; border: 1px solid #4E4E4E;}
+
+    .chr_select_wrap .commonBtn.allchr {position: absolute; left: 0; bottom: -50px; width: 100%; margin-left: 0;}
+    .chr_select_wrap .commonBtn.active {width: 100%; border: none; margin: 0 0 0 0px; background: #4E4E4E; color: #fff; border: 1px solid #4E4E4E;}
+
+
+    .table_page_wrap {position: relative; top: -1140px;}
+
+    .visualWrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tableWrap {position: relative; user-select:none; width: 100%; height: 480px; overflow: auto; margin: 0px; left: 0px; top: -20px;}
+
+    .graphContainer{
+        /* width: calc(100% - 40px); */
+        width: 100%;
+        height: 480px;
+        position: relative;
+        top: 120px;
+        left: 0px;
+    }
+    
+    .graphWrap {margin: 0; padding: 30px 0 20px;}
+
+
+    /* 모달 */
+    .modal{
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0; left: 0;
+    }
+    .modalBg{
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .modalContent{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        background: #EEF2F5;
+        border-radius: 4px;
+        padding: 20px 16px 40px;
+    }
+    .modal_title {display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
+    .modal_title p {font-size: 20px; color: #397FF4; font-weight: bold;}
+    .modal_title button {width: 100px; height: 40px; font-size: 15px; color: #4E4E4E; font-weight: bold;
+        border: 1px solid #000; border-radius: 4px; background: #fff;}
+    .mabcModalSelect {width: 165px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; font-weight: bold;
+        background: #fff url('../../images/select_arrow.png') no-repeat center right 12px/8px; padding: 0 16px;}
+    .modalGraph_Container{
+        width: 100%;
+        height: 80%;
+        background: #fff;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 20px;
+        margin-top: 15px;
+    }
+    .modalGraph_control {display: block; width: 40px;}
+    .modalGraph_control button {display: block; width: 24px; height: 24px; background: #fff; border: 1px solid #E6EBEE;
+        border-radius: 6px; font-size: 20px; font-weight: bold; color: #397FF4; line-height: 20px; margin-bottom: 3px;}
+    .modalGraph_control button:nth-child(2):after {content: ''; display: block; width: 14px; height: 1px; background: #D9D9D9; margin: 16px auto 0;}
+    .modalGraph_control input {display: block; transform: rotate(90deg) translate(163px, 75px);}
+    
+    .modal_close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        text-indent: -9999999px;
+        background: url(../../images/close_m.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .modalGraph_Wrap{
+        width: 90%;
+        height: 100%;
+        overflow: auto;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .modalGraph_scale{
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transform-origin: 0 0;
+        transform: scale(1);
+    }
+    .modalGraphElWrap{
+        position: relative;
+    }
+    .modalGraphName{
+        transform: translateY(-10px);
+        display: inline-block;
+    }
+    .modalStackDesc{
+        position: absolute;
+        font-size: 10px;
+        left: 50px;
+    }
+    .modalGraphEl{
+        min-width: 16px;
+        /* height: 527px; */
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .modalGraphSection{
+        position: relative;
+    }
+    .modalGraphElStack{
+        width: 100%;
+    }
+    .modalStackDescLine{
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        border-top: 1px solid #000;
+        left: 20px;
+        transform-origin: 0;
+    }
+    .modalZoomBtn{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 60px;
+    }
+    .modalSlider {
+        -webkit-appearance: none;
+        width: 174px;
+        height: 10px;
+        border-radius: 5px;  
+        background: #fff;
+        border: 1px solid #E6EBEE;
+        outline: none;
+    }
+    
+    .modalSlider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%; 
+        background: #fff;
+        border: 3px solid #397FF4;;
+        cursor: pointer;
+    }
+    .activeClickAni{
+        animation: opacityAni 1500ms infinite linear;
+    }
+    @keyframes opacityAni {
+        0%{opacity: 0;}
+        50%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+
+
+
+    .data_table_title_wrap {flex-wrap: wrap-reverse;}
+    .data_table_title_wrap .data_table_title {width: 100%; padding-top: 15px;}
+    #main .data_table_title_wrap .data_table_title + a {margin-left: 0; width: calc(50% - 5px); font-size: 14px;}
+    #main .data_table_title_wrap .data_table_title + a + .save_btn {width: calc(50% - 5px); font-size: 14px;}
+
+
+    #main .input_file_wrap label {width: 100%; text-align: center;}
+
+    .title_Select {flex-wrap: wrap;}
+    .title_Select .download {flex: 1;}
+    .title_Select .downloadSelectBox {flex: 1; margin-left: 0;}
+    .title_Select .middleTitle {width: 100%;}
+
+    .chr_select_wrap > p {flex: 1;}
+    .chr_select_wrap > .chrSelectBox {flex: 1;}
+    
+    
+     /* 21-12-15 추가 - css */
+    #main .data_table_title_wrap .data_table_title + a,
+    .mab_top_bar div.view div {
+        font-size: 12px;
+    }
+
+    .download {
+        display: inline-block;
+        width: auto;
+        height: auto;
+    }
+
+    .download a {
+        font-size: 12px;
+        line-height: 30px;
+        padding: 0 20px;
+    }
+
+    #main .data_table_title_wrap .data_table_title + a {
+        position: absolute;
+        left: 174px;
+        top: -50px;
+        width: 100px;
+    }
+
+    .mab_bar > .input_file_wrap {
+        padding-top: 0;
+    }
+
+    #main .view {
+        position: absolute;
+        left: -15px;
+        top: -165px;
+        width: 166px;
+    }
+
+    #main .view .commonBtn {
+        width: 80px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    #main .view .commonBtn:last-child {
+        margin-right: 0;
+    }
+
+
+    #main .data_table_section .data_table_title {
+        font-weight: 700;
+        letter-spacing: -0.025rem;
+    }
+
+    .data_table_section:after {
+        display: none;
+    }
+
+    #insertForm {
+        width: 100%;
+    }
+    
+    
+    
+    
+    
+     /* 21-12-21 수정 */
+	#main .mab_top_bar {
+		padding-bottom: 30px;
+		margin-bottom: 40px;	
+	}
+	
+	.data_table_title_wrap {
+		margin-bottom: 20px;
+	}
+	
+	#main section .data_table_title {
+		font-size: 16px;
+	}
+	
+	.data_table_section .data_sample_down > a,
+	#main .mab_top_bar select,
+	#main .mab_top_bar input,
+	#main .mab_top_bar span,
+	#main .mab_top_bar a {
+		font-size: 12px;
+	} 
+	
+	/* download_btn_wrap */
+    .download_btn_wrap {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+	
+	#main .download_btn_wrap .downloadSelectBox {
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	
+	#main .download_btn_wrap .download {
+	    margin-left: 0 !important;
+	    width: 100%;
+	}
+	
+	#main .view {
+		width: 80px;
+		top: -155px;
+	}
+	
+	    
+    
+    
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(3) {
+	   width: 22px;
+	   height: 17px;
+	   margin-left: 0px;
+	   margin-right: 10px;
+	}
+	
+	#main .user_header .ui_list_wrap {
+	    top: 7px;
+	}
+	    
+ 
+	.mab_chr_wrap_left {
+		width: 100% !important;
+		 margin-right:0px !important;
+		margin-left:0px !important;
+	}
+	
+	.mab_chr_wrap_left:not(.mab_chr_wrap_right) {
+		margin-bottom: 30px;
+	}
+	
+	#main .view .commonBtn, 
+	#main .view {
+		width: 130px;
+	}
+    
+    
+}

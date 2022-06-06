@@ -1,0 +1,488 @@
+@charset "utf-8";
+::-webkit-scrollbar {width:8px; height: 8px;}
+::-webkit-scrollbar-track {background:#efefef;}
+::-webkit-scrollbar-thumb {background-color:#9999; border-radius: 4px;}
+
+.file_box {position: absolute; left: 20px; bottom: 30px;}
+
+/******* check box 공통 *******/
+/******* input[type="checkbox"] {display: none;} ******/
+input[type="checkbox"] + label {width: 18px; height: 18px; padding: 0; background: url('../../images/none_check.png') no-repeat; border: none; position: relative;}
+input[type="checkbox"] + label:before {content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: url('../../images/check_box.png') no-repeat; opacity: 0; transition: 0.2s all;}
+input[type="checkbox"]:checked + label:before {opacity: 1;}
+
+
+
+
+/******* section - header *******/
+#main .mark_map_sect .data_table_title {font-weight: bold; margin: 0 0 30px;}
+
+
+.mab_bar {display: flex; align-items: center;}
+.mab_bar label {display: inline-block; height: 40px; line-height: 40px; font-size: 14px; font-weight: bold; color: #fff; border-radius: 3px; border: 1px solid #5796FF; background: #397FF4; cursor: pointer; padding: 0 20px; margin: 0 0 0 5px;}
+.input_file_wrap {display: flex; position: relative;}
+.file_text {width: 260px; height: 40px; border: 1px solid #E6EBEE; text-align: center; border-radius: 4px; background: #fff; overflow-x: hidden; text-overflow: ellipsis; white-space:nowrap; padding: 5px; font-size: 13px; text-align: left;}
+.input_file_wrap .flie_btn_box {display: flex;}
+
+
+.input_file_wrap .ex_data {position: absolute; top: -35px; left: 0; line-height: 1; color: #397FF4; text-decoration: underline; font-weight: 700; padding-top: 13px; margin-left: 5px; font-size: 14px;}
+    
+/* mab_top_bar */
+.mab_top_bar input.addMabcFile {display: none;}
+.mab_top_bar {position: relative; display: flex; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #03A6FF; margin-bottom: 50px;}
+.mab_bar_left {position: relative; display: flex; align-items: center; margin-right: 10px;}
+.mab_bar_left select {width: 112px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; background: #fff; padding: 0 16px;}
+.mab_bar_left select.type_select_info {width: 200px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; margin: 0px 0px 0 5px; overflow-x: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.mab_top_bar .give_info {position: absolute; bottom: 10px; left: 5px; font-size: 14px; color: #707070;}
+
+.select_top_box {margin-left: 10px;}
+.select_top_box > label {padding: 0; background-color: #fff; border: none;}
+.select_top_box > label > .com_select {width: 200px; border: 1px solid #E6EBEE; padding: 0px 20px; line-height: 38px; border-radius: 4px; background: url('../../images/select_arrow.png') no-repeat right 15px center;}
+
+
+/* 버튼 공통 */
+.mab_bar_right button {margin-left: 5px;}
+
+.mab_bar_right button.save {display: block; height: 40px; line-height: 40px; font-size: 14px; font-weight: bold; color: #397FF4; background: #ECF2F5; border-radius: 4px; padding: 0 20px;}
+
+/* 내려받기 버튼 - 회색 */
+.mab_bar_right button.dawnload {display: block; height: 40px; line-height: 18px; font-size: 14px; font-weight: bold; color: #397FF4; background: #ECF2F5; border-radius: 4px; padding: 0 10px; letter-spacing: -0.05em;}
+
+.mab_top_bar div.view {position: absolute; right: 0; bottom: 0; width: 168px; height: 48px; font-size: 14px; font-weight: bold; text-align: center; display: flex; z-index: 0;}
+.mab_top_bar div.view .commonBtn {background: #397FF4; color: #fff; border: none; width: 100%; line-height: 48px;}
+
+
+
+
+/* 표, 차트 */
+.visualWrap .tableContainer,
+.visualWrap .chartArea {width: calc(50% - 10px); height: 100%; padding: 20px; border-radius: 8px; -webkit-border-radius: 8px; border: 1px solid #E6EBEE;}
+
+/* header */
+.data_header {display: flex; justify-content: space-between; margin-bottom: 30px; }
+.data_header > .export_btn {background-color: #fff; font-size: 14px; line-height: 40px; border: 1px solid #222222; padding: 0 30px; border-radius: 4px; font-weight: 700;}
+
+
+
+/* tableContainer */
+.visualWrap .tableContainer {margin-right: 10px; }
+
+/* table_header */
+.visualWrap .tableContainer .table_header {margin-right: 9px;}
+.visualWrap .tableContainer .table_header .table_title {font-size: 20px;}
+
+/* table */
+.visualWrap .tableContainer .tableWrap {border: 1px solid #E3E3E3; overflow: hidden; max-width: 689px; width: 100%; overflow-x: auto; margin: 0;}
+.tableContainer .tableWrap .table {width: 100%; max-width: 689px;}
+
+
+/* thead */
+.tableContainer .tableWrap .table > thead > tr > th {height: 100%; width: 30%;}
+.tableContainer .tableWrap .table > thead > tr > th:first-child {width: 10%;}
+.tableContainer .tableWrap .table > tbody > tr > td > input[type="checkbox"] + label,
+.tableContainer .tableWrap .table > thead > tr > th > input[type="checkbox"] + label {width: 18px; height: 18px; padding: 0; background: url('../../images/none_check.png') no-repeat; border: none; position: relative; display: inline-block;}
+
+/* tbody */
+.tableContainer .tableWrap .table > .markerTbody {width: 100%; height: 425px; display: inline-block; overflow-y: auto; overflow-x: auto; width: 100%;}
+
+/* tr */
+.tableContainer .tableWrap .table tr {border: none; border-bottom: 1px solid #E3E3E3; padding: 0; height: 25px;}
+
+/* th */
+.tableContainer .tableWrap .table th {padding: 0px 0px; line-height: 25px;}
+/* .tableWrap .table th:not(:first-child) > div {display: flex; flex-direction: column;}
+.tableWrap .table th:not(:first-child) > div > input[type="text"] {line-height: 25px; border: 1px solid #E3E3E3; border-radius: 4px; -webkit-border-radius: 4px; padding: 0 0 0 10px; width: 130px; margin: 0 auto;}
+.tableWrap .table th:not(:first-child) > div > label {margin-bottom: 10px;} */
+
+/* td */
+.tableContainer .tableWrap .table > tbody > tr > td {width: 30%;}
+.tableContainer .tableWrap .table > tbody > tr > td:first-child {width: calc(10% - 0px);}
+
+
+
+/* chartArea */
+.visualWrap .chartArea {margin-left: 10px;}
+.visualWrap .chartArea .chartContainer {width: 100%; border: none;}
+
+.visualWrap .chartArea .chartContainer .chartWrap {overflow: auto; padding-bottom: 30px;}
+.visualWrap .chartArea .chartContainer .chartWrap .chartName {font-size: 15px; margin-bottom: 10px; color: #397FF4; text-align: center;}
+
+
+
+.visualWrap .chartArea .cart_header .chartInput {line-height: 25px; border: 1px solid #E3E3E3; max-width: 272px; width: 100%; padding: 3px 20px; border-radius: 4px; -webkit-border-radius: 4px; background: #fff url('../../images/search.png') no-repeat right 20px center;}
+
+
+
+
+
+
+
+
+
+/* modal */
+.modalBg {z-index: 9999999;}
+.modalContent {border-radius: 4px; -webkit-border-radius: 4px; z-index: 99999999;}
+.modalContent .modalTitle {color: #397FF4; font-size: 20px; font-weight: bold; margin-bottom: 20px;}
+.modalContent .data_header .print_btn {margin-right: 10px; text-indent: -99999px; background: #fff url('../../images/print.png') no-repeat center center;}
+
+
+/* modalChartContainer */
+.modalContent .modalChartContainer {}
+.modalContent .modalChartContainer .modalChartWrap {overflow: auto; height: 100%;}
+.modalContent .modalChartContainer .modalChartCtl > button {background-color: #fff; border: 1px solid #E6EBEE;  border-radius: 6px; -webkit-border-radius: 6px; color: #397FF4;}
+.modalContent .modalChartContainer .modalChartCtl > button:first-child {margin-bottom: 3px;}
+
+
+.modalContent .modal_table_data_wrap .modalTable {padding: 15px 23px; height: 50%; overflow: hidden;}
+
+
+
+/* tableContainer */
+.visualWrap .tableContainer {margin-right: 10px; }
+
+/* table_header */
+.modalTable .modalTableName {font-size: 16px; font-weight: bold; margin-bottom: 10px;}
+
+/* table */
+.modal_table_data_wrap table {border: 1px solid #E3E3E3; display: inline-block; overflow: hidden; height: 280px;}
+
+
+/* thead */
+.modal_table_data_wrap table > thead {width: 100%; display: inline-block;}
+.modal_table_data_wrap table > thead > tr > th {height: 100%; width: 45%;}
+.modal_table_data_wrap table > thead > tr > th:first-child {width: 8%; padding: 5px 10px;}
+.modal_table_data_wrap table > tbody > tr > td > input[type="checkbox"] + label,
+.modal_table_data_wrap table > thead > tr > th > input[type="checkbox"] + label {width: 18px; height: 18px; padding: 0; background: url('../../images/none_check.png') no-repeat; border: none; position: relative; display: inline-block;}
+
+/* tbody */
+.modal_table_data_wrap table > .modalTableBody {width: 100%; height: 227px; display: inline-block; overflow-y: auto; overflow-x: hidden; max-width: 689px; width: 100%;}
+
+/* tr */
+.modal_table_data_wrap .modalTable table tr {border: none; border-bottom: 1px solid #E3E3E3; padding: 0; height: auto;}
+
+/* th */
+.modal_table_data_wrap table th {padding: 5px 0px; line-height: 40px;}
+/* .modal_table_data_wrap table th {padding: 5px 30px;} */
+/* .modal_table_data_wrap table th:not(:first-child) > div {display: flex; flex-direction: column;}
+.modal_table_data_wrap table th:not(:first-child) > div > input[type="text"] {line-height: 20px; border: 1px solid #E3E3E3; border-radius: 4px; -webkit-border-radius: 4px; padding: 0 0 0 10px;} */
+/* .modal_table_data_wrap table th:not(:first-child) > div > label {margin-bottom: 5px;} */
+
+.modal_table_data_wrap table th:not(:first-child) > div > label {display: block;}
+
+/* td */
+.modal_table_data_wrap table > tbody > tr > td {width: 45%; font-size: 14px; line-height: 40px; height: 40px;} 
+.modal_table_data_wrap table > tbody > tr > td:first-child {width: calc(8% + 7px);}
+
+
+
+/* modalData */
+.modal_table_data_wrap .modalData {padding: 15px 23px;}
+.modal_table_data_wrap .modalData .modalTableName {font-size: 16px; font-weight: bold; margin-bottom: 15px;}
+
+
+.modal_table_data_wrap .modalData .table_name_box {overflow-x: auto; overflow-y: auto; height: calc(100% - 35px); padding: 0px 30px;}
+
+/* tables */
+.modal_table_data_wrap .modalData .table_name_box .name_table {border: none; height: auto; margin-bottom: 20px;}
+
+/* thead */
+.modalData .table_name_box .name_table > thead > tr {
+    /* border-bottom: 1px solid #1D50AF; */
+}
+
+/* th */
+.modalData .table_name_box .name_table > thead > tr > th {color: #397FF4; font-size: 15px; font-weight: bold; line-height: 35px; text-align: left; padding: 0;}
+
+/* td */
+.modalData .table_name_box .name_table > tbody > tr > td {line-height: 30px; width: 50px; text-align: center; border: 1px solid #000; height: 30px; font-size: 14px;} 
+/* .modalData .table_name_box .name_table > tbody > tr > td:first-child {width: 40%;} */
+/* .modalData .table_name_box .name_table > tbody > tr > td:not(:first-child) {text-align: center;} */
+
+
+.modal_tab_menu {display: none;}
+
+
+
+/* 21-12-15 추가 - css */
+#main {
+    padding-top: 40px;
+}
+
+#header + #main .user_header {
+    margin-bottom: 32px;
+}
+
+.data_table_title_wrap {
+    margin-bottom: 30px;
+}
+
+
+.select_top_box > label > .com_select {
+    width: 110px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.mab_top_bar {
+    padding-bottom: 40px;
+    align-items: flex-end;
+}
+
+#main .view {
+    justify-content: right;
+}
+
+#main .view .commonBtn {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.mab_bar_left:after {
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+}
+
+.select_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.select_box .select_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.select_box .select_wrap .data_name {
+    padding-left: 3px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.select_box .select_wrap:last-child .data_name {
+    padding-left: 7px;
+}
+
+.mab_bar > .input_file_wrap .flie_btn_box .ex_data {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.data_table_title_wrap a {
+    font-size: 14px;
+}
+
+/* chr_select_wrap */
+.chr_select_wrap select {
+    font-size: 12px;
+}
+
+.chr_select_wrap .commonBtn {
+    width: 22px;
+    margin-left: 25px;
+}
+
+.modalContent {
+    position: relative;
+}
+
+.modal_close {
+    display: block;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    text-indent: -9999999px;
+    width: 24px;
+    height: 24px;
+    background: url(/images/close.png) no-repeat;
+    background-size: 100%;
+}
+
+
+.tableContainer .tableWrap .table > thead > tr > th {
+    line-height: 20px;
+}
+
+.tableContainer .tableWrap .table > thead > tr > th:first-child {
+    line-height: 25px;
+}
+
+.visualWrap .tableContainer .tableWrap,
+.tableContainer .tableWrap .table {
+    max-width: 100%;
+}
+
+
+
+
+
+/* 21-12-20 수정 */
+#main .mab_top_bar {
+	padding-bottom: 40px;
+	margin-bottom: 50px;	
+}
+
+.data_table_title_wrap {
+	margin-bottom: 30px;
+}
+
+
+#main section .data_table_title {
+	font-size: 18px;
+}
+
+#main .mab_top_bar select,
+#main .mab_top_bar input,
+#main .mab_top_bar span,
+#main .mab_top_bar a {
+	font-size: 14px;
+	font-weight: 700;
+} 
+
+
+.data_table_title_wrap .result_down_btn {
+	background: none;
+	color: #000;
+	text-decoration: underline;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 15px;
+	background: url('/images/download.svg') no-repeat left center;
+	width: 120px;
+}
+
+
+.data_header {
+    flex-direction: column;
+}
+
+
+/* .download_btn_wrap */
+#main .export_btn {
+	border: none;
+	padding: 0px;
+}
+
+.download_btn_wrap {
+	display: flex;
+    align-items: center;
+}
+
+#main .downloadSelectBox {
+    width: 140px;
+    height: 40px;
+    border: 1px solid #E6EBEE;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #fff url(../../images/select_arrow.png) no-repeat center right 12px/8px;
+    padding: 0 16px;
+}
+
+.download_btn_wrap .commonBtn.download {
+	width: 120px; 
+	border: none; 
+	margin: 0 10px 0 0;
+	border: 1px solid #4E4E4E; 
+	line-height: 38px; 
+	height: 40px;
+	text-align: center; 
+	font-size: 14px; 
+	border-radius: 4px; 
+	font-weight: 700; 
+	color: #4E4E4E;
+}
+
+.cart_box_header {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+.modalContent {
+    position: relative;
+}
+
+.modalVisual .modalChartContainer {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.modalVisual .modal_table_data_wrap {
+    flex: 1.7;
+}
+
+
+.modal_close {
+    display: block;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    text-indent: -9999999px;
+    width: 24px;
+    height: 24px;
+    background: url(/images/close.png) no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+
+/* 21-12-21 수정 */
+.modalWrap {
+	z-index: 99999999;	
+}
+
+.modal_table_data_wrap table th {
+	line-height: 30px;
+}
+
+.visualWrap .chartArea .cart_header .chartInput {
+	line-height: 32px;
+}
+
+.cart_header .cart_box_header {
+	justify-content: right;
+}
+
+#main .view .commonBtn {
+	width: 120px;
+}
+
+#polyModalInput {
+	margin-right: 5px;
+}
+
+
+
+
+#main .user_header .ui_list_wrap > .ui_list:nth-child(3) {
+   width: 22px;
+   height: 17px;
+   background: url('../../images/sign-out.svg') no-repeat;
+   margin-left: 10px;
+}
+
+
+#main .view .commonBtn {
+    width: auto;
+    padding: 0 10px;
+}
+
+
+
+
+

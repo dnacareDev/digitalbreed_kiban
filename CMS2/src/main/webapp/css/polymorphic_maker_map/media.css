@@ -1,0 +1,869 @@
+
+@media screen and (max-width:1628px){
+    #header {display: none; position: fixed; top: 0; left: 0; background: #F2F4FA; z-index: 999; box-shadow: 0 0 10px rgba(1,1,1,0.1);}
+    #header.on {display: block;}
+    .tb_blank.on {display: block; position: fixed; width: 100%; height: 100%; z-index: 500;}
+    #wrap {padding: 12px 24px;}
+    .search_wrap {display: flex; align-items: center; margin-bottom: 10px;}
+    .tb_menu_btn {display: block; cursor: pointer; margin-right: 30px;}
+    .tb_menu_btn span {display: block; width: 26px; height: 2px; background: #000; margin: 8px 0;}
+    .mab_top_bar {flex-direction: column; align-items: flex-start;}
+    .mab_bar_left {margin-bottom: 35px;}
+    .mab_bar_right {flex-direction: column; align-items: flex-start; width: 100%;}
+    .input_file_wrap {margin-bottom: 10px; width: 100%;}
+    .input_file_wrap > .file_text {width: 50%;}
+    .select_top_box {margin-left: 0; width: calc(50% + 98px);}
+    .select_top_box > label:first-child {margin-left: 0;}
+    .select_top_box > label {width: calc(50% - 5px);}
+    .select_top_box > label > .com_select {width:100%; font-size: 12px; padding: 0 10px;}
+
+
+    .modalContent {max-height: 700px; height: 100%; }
+    
+    
+    /* 21-12-15 추가 - css */
+    .mab_bar_right {
+        flex-direction: row;
+    }
+
+    .input_file_wrap > .file_text {
+        width: 340px;
+    }
+
+    .input_file_wrap {
+        width: auto;
+    }
+
+    .select_top_box > label > .com_select {
+        width: 110px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .select_top_box {
+        width: auto;
+        margin-left: 20px;
+    }
+
+
+
+	
+	/* 21-12-20 수정 */
+	.cart_box_header {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#main .cart_box_header input {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	
+	#main .download_btn_wrap .commonBtn.download {
+		margin-left: 5px !important;
+	}
+	
+	
+	#main .cart_header .download_btn_wrap {
+		margin-bottom: 10px;
+	}
+	
+	#main .cart_box_header input {
+		line-height: 30px;
+	}
+	
+	
+	.visualWrap .chartArea .chartContainer .chartWrap {
+		padding-bottom: 0;
+	}
+	
+	
+	.tableWrap {
+		height: 538px;
+	}
+	
+	
+	
+	
+	/* 21-12-21 수정 */
+	.modal_table_data_wrap table th {
+		line-height: 30px;
+		padding: 0;
+	}
+	
+	.modal_table_data_wrap table > thead > tr > th:first-child {
+	    padding: 0px 10px;
+	}
+	
+	.modal_table_data_wrap table {
+		height: 220px;
+	}
+	
+	.modal_table_data_wrap table > .modalTableBody {
+		height: 188px;
+	}
+	
+	
+	#main .mab_top_bar .give_info {bottom:13px; top: auto; left: -1px; font-size: 14px; color: #707070; font-weight: bold;}
+	
+	#main .mab_top_bar .give_info {
+        font-size: 12px;
+        background-position: left 5px top 2px;
+        background-size: 13px;
+    }	
+    
+    #main .mab_top_bar .de_give_info {
+	    top: auto;
+	    bottom:0px;
+	}
+	
+	
+}
+
+@media screen and (max-width: 1280px) {
+    .mab_top_bar {align-items: flex-start; justify-content: left; padding-bottom: 35px;  margin-bottom: 50px; flex-direction: column;}
+
+    .mab_bar_left,
+    .mab_bar_right {width: 100%; align-items: flex-start;}
+    .mab_bar_left {margin-bottom: 15px; flex-direction: column;}
+    .mab_bar_left:after {display: none;}
+
+    .mab_bar > .input_file_wrap {padding-top: 15px;}
+
+    .mab_bar_left .select_box {margin-bottom: 5px;}
+    .mab_bar_left .select_box > .type_select {width: 180px;}
+    .mab_bar_left .select_box > .type_select_info {width: 308px;}
+
+    .mab_bar_left .input_file_wrap .file_text {width: 50%;}
+    .mab_bar > .input_file_wrap > .file_ex {top: -8px; left: 2px; font-size: 14px;}
+
+    input[type="checkbox"] + label {width: 15px; height: 15px; background-size: 100%;}
+    input[type="checkbox"] + label:before {background-size: 100%;}
+
+    .mab_bar > .input_file_wrap > .under_marker_check {position: absolute; top: -9px; left: -4px; font-size: 12px;}
+    .mab_bar > .input_file_wrap > .under_marker_check > span {display: inline-block;}
+    .mab_bar > .input_file_wrap > .under_marker_check > span {margin-right: 10px;}
+    
+    .input_file_wrap .ex_data {font-size: 12px; top: -18px;}
+
+    
+    /* 표, 차트 */
+    /* header */
+    .data_header {margin-bottom: 20px; }
+    .data_header > .export_btn {font-size: 12px; line-height: 30px; padding: 0 20px;}
+
+
+    /* tableContainer */
+    .visualWrap .tableContainer {margin-right: 10px; }
+
+    /* table_header */
+    .visualWrap .tableContainer .table_header .table_title {font-size: 16px;}
+
+    /* table */
+    .visualWrap .tableContainer .tableWrap {max-width: 689px;}
+    .tableContainer .tableWrap .table { max-width: 689px;}
+
+    /* thead */
+    .tableContainer .tableWrap .table > tbody > tr > td > input[type="checkbox"] + label,
+    .tableContainer .tableWrap .table > thead > tr > th > input[type="checkbox"] + label {width: 15px; height: 15px; background-size: 100%;}
+
+    /* th */
+    .tableContainer .tableWrap .table th {padding: 10px 0px; line-height: 30px;}
+
+    /* td */
+    .tableContainer .tableWrap .table > tbody > tr > td {line-height: 38px; height: 38px; font-size: 14px;}
+    .tableContainer .tableWrap .table > tbody > tr > td:first-child {width: 11%;}
+
+
+    /* chartArea */
+    .visualWrap .chartArea .chartContainer .chartWrap {padding-bottom: 20px;}
+    .visualWrap .chartArea .chartContainer .chartWrap .chartName {font-size: 14px; margin-bottom: 5px;}
+
+
+    .visualWrap .chartArea .cart_header .chartInput {line-height: 25px; max-width: 272px; padding: 3px 20px; background: #fff url('../../images/search.png') no-repeat right 20px center; margin-right: 10px;}
+
+
+
+
+
+
+
+
+
+    /* modal */
+    .modalContent {max-height: 600px; height: 100%; width: 700px;}
+    .modalContent .modalTitle {font-size: 14px; margin-bottom: 0px;}
+    .modalContent .data_header {margin-bottom: 15px;}
+    .modalContent .data_header .print_btn {margin-right: 5px; background: #fff url('../../images/print.png') no-repeat center center; background-size: 40%; width: 30px; height: 30px;}
+    .modalContent .data_header .export_btn {text-indent: -999999px; background: #fff url('../../images/export.png') no-repeat center center; width: 30px; height: 30px;}
+
+
+    /* modalChartContainer */
+    .modalContent .modalChartContainer {border-radius: 6px;}
+    .modalContent .modalChartContainer .modalChartWrap {overflow: auto; height: 100%;}
+    .modalContent .modalChartContainer .modalChartCtl > button:first-child {margin-bottom: 3px;}
+
+
+    .modalContent .modal_table_data_wrap .modalTable {padding: 15px 23px; height: 50%; overflow: hidden; border-radius: 6px;}
+
+
+
+    /* tableContainer */
+    .visualWrap .tableContainer {margin-right: 10px;}
+
+    /* table_header */
+    .modalTable .modalTableName {font-size: 14px; font-weight: bold; margin-bottom: 10px;}
+
+    /* table */
+    .modal_table_data_wrap table { height: 190px;}
+
+
+    /* thead */
+    .modal_table_data_wrap table > thead > tr > th {line-height: 38px; height: 38px; padding: 0;}
+    .modal_table_data_wrap table > thead > tr > th:first-child {width: 8%; padding: 0px 0px;}
+    .modal_table_data_wrap table > tbody > tr > td > input[type="checkbox"] + label,
+    .modal_table_data_wrap table > thead > tr > th > input[type="checkbox"] + label {width: 15px; height: 15px; background-size: 100%;}
+
+    /* tbody */
+    .modal_table_data_wrap table > .modalTableBody {height: 150px; max-width: 689px;}
+
+    /* th */
+    .modal_table_data_wrap table th {padding: 5px 0px; line-height: 30px;}
+
+
+    .modal_table_data_wrap table th:not(:first-child) > div > label {display: block;}
+
+    /* td */
+    .modal_table_data_wrap table > tbody > tr > td {width: 45%; font-size: 14px; line-height: 35px; height: 35px; font-size: 14px;} 
+    .modal_table_data_wrap table > tbody > tr > td:first-child {width: calc(8% + 7px);}
+
+
+
+    /* modalData */
+    .modal_table_data_wrap .modalData {padding: 15px 23px; border-radius: 6px;}
+    .modal_table_data_wrap .modalData .modalTableName {font-size: 16px;  margin-bottom: 15px;}
+
+
+    .modal_table_data_wrap .modalData .table_name_box {height: calc(100% - 35px); padding: 0px 30px;}
+
+    /* tables */
+    .modal_table_data_wrap .modalData .table_name_box .name_table {margin-bottom: 20px;}
+
+    /* th */
+    .modalData .table_name_box .name_table > thead > tr > th { font-size: 15px; line-height: 35px;}
+
+    /* td */
+    .modalData .table_name_box .name_table > tbody > tr > td {line-height: 30px; width: 30%; text-align: left; height: 30px; padding-right: 20px; font-size: 12px;} 
+
+
+
+    /* .modalVisual {flex-direction: column;} */
+    
+    
+    /* 21-12-15 추가 - css */
+     .mab_bar_right {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .input_file_wrap > .file_text {
+        width: 340px;
+    }
+
+    .input_file_wrap {
+        width: auto;
+    }
+
+    .select_top_box > label > .com_select {
+        width: 110px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .select_top_box {
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .modalContent .data_header .print_btn {
+        margin-right: 5px;
+        background: #fff url(/images/print.png) no-repeat center center;
+        background-size: 40%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .tableContainer .tableWrap .table > thead > tr > th {
+        line-height: 20px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    
+    .tableContainer .tableWrap .table > thead > tr > th:first-child {
+        line-height: 30px;
+    }
+    
+    .visualWrap .tableContainer .tableWrap,
+    .tableContainer .tableWrap .table {
+        max-width: 100%;
+    }
+    
+    section .mab_bar_right {
+		align-items: center;
+	}
+    
+    .input_file_wrap {
+    	margin-bottom: 13px;
+    }
+    
+    section .data_table_title_wrap {
+    	margin-bottom: 15px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #wrap {padding: 12px 0px 0px;}
+
+    /* main - header */
+    #main {padding: 0 0px 30px; overflow-y: auto;}
+    #main .user_header {background-color: #f2f4fa; padding: 50px 30px 30px; flex-direction: column-reverse; align-items: stretch; margin: 0 0 76px;}
+    
+    /* search */
+    #main .user_header .search_wrap {width: 100%; position: relative; display: flex; justify-content: right; top: 10px;}
+    #main .user_header .ui_list_wrap { position: relative; top: 10px;}
+   #main .user_header .ui_list_wrap > .ui_list {position: absolute; top: calc(50% + 2px);}
+    #main .user_header .search_wrap > .tb_menu_btn {margin-right: 0px; margin-top: 2px; position: absolute; right: 0; top: 50%; transform: translateY(calc(-50% - 5px));}
+
+    .tb_menu_btn span {display: block; width: 17px; height: 2px; margin: 5px 0;}
+    #main .user_header .search_wrap > label {position: absolute; right: 34px; top: 0px;}
+
+    /* search icon */
+    #main .user_header .search_wrap > label:before {top: 50%; transform: translateY(-50%); right: 25px; width: 20px; height: 20px;}
+
+    #main .user_header .search_wrap > label .search[type="text"] {border: 1px solid #E4E4E4; height: 30px; width: 0px; padding-left: 0px; opacity: 0;}
+
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(1) {height: 22px; left: 35px; bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(2) {bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(3) {width: 18px; height: 22px; right: 20px; bottom: -27px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(4) {display: none;}
+
+
+
+    .data_table_section {margin: 90px 20px 0px; border: 1px solid #E6EBEE; border-radius: 4px; -webkit-border-radius: 4px; padding: 16px; position: relative;}
+    
+
+    .mab_top_bar {align-items: flex-start; justify-content: left; padding-bottom: 0px;  margin-bottom: 50px; flex-direction: column; border: none;}
+    .mab_top_bar .give_info {bottom: -30px; left: 5px; font-size: 14px; color: #707070; font-weight: bold;}
+
+    .mab_bar_left,
+    .mab_bar_right {width: 100%; align-items: center;}
+    .mab_bar_left {margin-bottom: 0px; flex-direction: column; margin-right: 0; padding-right: 0;}
+    .mab_bar_left:after {display: none;}
+
+    .mab_bar > .input_file_wrap {padding-top: 15px; width: 100%;}
+    .mab_bar > .input_file_wrap .file_text {width: calc(80% - 10px);}
+    .mab_bar > .input_file_wrap .flie_btn_box {width: 20%; min-width: 100px;}
+    .mab_bar > .input_file_wrap .flie_btn_box > label {width: 100%;}
+    .mab_bar > .input_file_wrap .input-file {width: 100%;}
+    .mab_bar_left .select_box {margin-bottom: 25px; width: 100%;}
+    .mab_bar_left .select_box > .type_select {width: calc(45% - 10px); padding: 0 10px; font-size: 12px;}
+    .mab_bar_left .select_box > .type_select_info {width: 55%; padding: 0 10px; font-size: 12px;}
+
+    .select_top_box {width: 100%;}
+    
+
+    .mab_bar_right .input_file_wrap .file_text { margin-bottom: 10px; width: calc(80% - 0px); margin-right: 10px;}
+    .mab_bar > .input_file_wrap > .file_ex {top: -8px; left: 2px; font-size: 14px;}
+
+    .input_file_wrap .flie_btn_box {display: flex;}
+
+    /* 버튼 공통 */
+    .mab_bar_right .flie_btn_box button {margin-left: 5px; width: 33.333%; font-size: 12px;}
+
+    .mab_bar_right .flie_btn_box .file_add {width: 100px; text-align: center; font-size: 12px; margin-left: 0;}
+    .mab_bar_right .flie_btn_box button.save { padding: 0 10px;}
+
+    /* 내려받기 버튼 - 회색 */
+    .mab_bar_right .flie_btn_box button.dawnload {padding: 0 10px; letter-spacing: -0.05em;}
+
+    /* .mab_top_bar button.view {position: absolute; right: auto; left: -17px; bottom: auto; top: -120px; width: 168px; height: 48px; font-size: 14px; border-radius: 4px;} */
+    .mab_top_bar div.view {width: 168px; height: 48px; font-size: 14px; position: absolute; top: -120px; left: -26px;}
+    .mab_top_bar div.view div{ border: none; margin: 10px 6px 0 0;}
+    .mab_top_bar div.view .commonBtn {line-height: 40px; font-size: 13px;}
+
+    .mab_chr_wrap {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;}
+    .mab_chr_wrap_left {margin-right: 0; width: 100%; border: none; padding: 0; border-radius: 0; height: 680px;}
+    .data_table_section:after {content: ''; position: absolute; top: calc(50% + 125px); transform: translateY(-50%); left: 0; right: 0; height: 10px; width: 100%; background-color: #E6EBEE; z-index: 999;}
+    .mab_chr_wrap_right {border: none; width: 100%;}
+
+
+    .mab_chr_wrap_left .btn_all_box {margin-bottom: 20px; padding-right: 5px;}
+
+    /* btn - wrap */
+    .chr_btn_wrap {display: flex; align-items: center; justify-content: space-between; width: 100%;}
+    .chr_select_wrap {display: flex; align-items: center; justify-content: flex-end; margin-top: 12px; position: relative;}
+    .chr_btn_wrap p {font-size: 16px;}
+    .commonBtn {width: 75px; height: 40px; font-size: 14px; line-height: 40px; text-align: center; border: 1px solid #000; background: #fff; color: #4E4E4E; border-radius: 4px; cursor: pointer; font-weight: bold; margin: 0 0px 0 6px;  position: relative; z-index: 1;}
+    .commonBtn.active {width: 75px; background: #4E4E4E; color: #fff; border: none;}
+    .chr_select_wrap p {width: 20%; height: 40px; font-size: 14px; line-height: 38px; border: 1px solid #E6EBEE;
+        margin-right: 10px; text-align: center; border-radius: 4px;}
+    .chr_select_wrap select {width: 140px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; font-weight: bold;
+        background: #fff url('../../images/select_arrow.png') no-repeat center right 12px/8px; padding: 0 16px;}
+    .chr_select_wrap .commonBtn {width: 200px; border: none; margin: 0 0 0 10px; background: #fff; color: #4E4E4E; border: 1px solid #4E4E4E;}
+
+    .chr_select_wrap .commonBtn.allchr {position: absolute; left: 0; bottom: -50px; width: 100%; margin-left: 0;}
+    .chr_select_wrap .commonBtn.active {width: 100%; border: none; margin: 0 0 0 0px; background: #4E4E4E; color: #fff; border: 1px solid #4E4E4E;}
+
+
+    .table_page_wrap {position: relative; top: -1140px;}
+
+    .visualWrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tableWrap {position: relative; user-select:none; width: 100%; height: 480px; overflow: auto; margin: 0px; left: 0px; top: -20px; max-width: 100% !important;}
+    .tableWrap .table {width: 100%; max-width: 100% !important;}
+    .graphContainer{
+        /* width: calc(100% - 40px); */
+        width: 100%;
+        height: 480px;
+        position: relative;
+        top: 120px;
+        left: 0px;
+    }
+    
+    .graphWrap {margin: 0; padding: 30px 0 20px;}
+
+    .data_table_title {font-size: 16px;}
+
+    .mark_map_sect {}
+    .sect_warp {border: 1px solid #E6EBEE; border-radius: 4px; padding: 15px; margin: 0 10px;}
+
+    /* 표, 차트 */
+    /* header */
+    .data_header {margin-bottom: 20px; }
+    .data_header > .export_btn {font-size: 12px; line-height: 30px; padding: 0 20px;}
+
+
+    /* tableContainer */
+    .visualWrap .tableContainer {margin-right: 0px; width: 100%; margin-bottom: 20px; padding-bottom: 10px;}
+
+    /* table_header */
+    .visualWrap .tableContainer .table_header {margin-bottom: 50px;}
+    .visualWrap .tableContainer .table_header .table_title {font-size: 16px;}
+
+    /* table */
+    .visualWrap .tableContainer .tableWrap {max-width: 689px;}
+    .tableContainer .tableWrap .table { max-width: 689px;}
+
+    /* thead */
+    .tableContainer .tableWrap .table > tbody > tr > td > input[type="checkbox"] + label,
+    .tableContainer .tableWrap .table > thead > tr > th > input[type="checkbox"] + label {width: 15px; height: 15px; background-size: 100%;}
+
+    .tableContainer .tableWrap .table > thead > tr > th:nth-child(2),
+    .tableContainer .tableWrap .table > tbody > tr > td:nth-child(2) {width: 25%;}
+
+    .tableContainer .tableWrap .table > thead > tr > th:nth-child(3),
+    .tableContainer .tableWrap .table > tbody > tr > td:nth-child(3),   
+    .tableContainer .tableWrap .table > thead > tr > th:nth-child(4),
+    .tableContainer .tableWrap .table > tbody > tr > td:nth-child(4),
+    .tableContainer .tableWrap .table > thead > tr > th:nth-child(5),
+    .tableContainer .tableWrap .table > tbody > tr > td:nth-child(5) {width: 25%;}
+
+    /* th */
+    .tableContainer .tableWrap .table th {padding: 10px 0px; line-height: 30px;}
+
+    /* td */
+    .tableContainer .tableWrap .table > tbody > tr > td {line-height: 38px; height: 38px; font-size: 12px; letter-spacing: -0.075em;}
+    /* .tableContainer .tableWrap .table > tbody > tr > td:first-child {width: calc(11% - 5px);} */
+    .tableContainer .tableWrap .table > tbody > tr > td:first-child {width: 10%;}
+
+
+    /* chartArea */
+    .visualWrap .chartArea {width: 100%; margin: 0;}
+    .visualWrap .chartArea .chartContainer .chartWrap {padding-bottom: 20px;}
+    .visualWrap .chartArea .chartContainer .chartWrap .chartName {font-size: 14px; margin-bottom: 5px;}
+
+    .visualWrap .chartArea .cart_header {margin-bottom: 50px;}
+    .visualWrap .chartArea .cart_header .chartInput {line-height: 25px; max-width: 272px; padding: 3px 20px; background: #fff url('../../images/search.png') no-repeat right 20px center;}
+
+
+
+
+
+
+
+
+
+    /* modal */
+    .modalWrap {padding: 30px;}
+    .modalContent {max-height: 650px; height: 100%; overflow-y: auto; max-width: 300px; padding: 20px;}
+    .modalContent .modalTitle {font-size: 16px; margin-bottom: 0px;}
+    .modalContent .data_header .print_btn {margin-right: 5px; background: #fff url('../../images/print.png') no-repeat center center; background-size: 40%;}
+
+
+    /* modalChartContainer */
+    .modalContent .modalChartContainer {border-radius: 6px;}
+    .modalContent .modalChartContainer .modalChartWrap {overflow: auto; height: 100%;}
+    .modalContent .modalChartContainer .modalChartCtl > button:first-child {margin-bottom: 3px;}
+
+
+    .modalContent .modal_table_data_wrap .modalTable {padding: 15px 23px; height: 50%; overflow: hidden; border-radius: 6px;}
+
+
+
+    /* tableContainer */
+    .visualWrap .tableContainer {margin-right: 0px;}
+
+    /* table_header */
+    .modalTable .modalTableName {font-size: 14px; font-weight: bold; margin-bottom: 10px; padding-top: 20px;}
+
+    /* table */
+    .modal_table_data_wrap table { height: 190px;}
+
+
+    /* thead */
+    .modal_table_data_wrap table > thead > tr > th {line-height: 38px; height: 38px; padding: 0;}
+    .modal_table_data_wrap table > thead > tr > th:first-child {width: 8%; padding: 0px 0px;}
+    .modal_table_data_wrap table > tbody > tr > td > input[type="checkbox"] + label,
+    .modal_table_data_wrap table > thead > tr > th > input[type="checkbox"] + label {width: 15px; height: 15px; background-size: 100%;}
+
+    /* tbody */
+    .modal_table_data_wrap table > .modalTableBody {height: 150px; max-width: 689px;}
+
+    /* th */
+    .modal_table_data_wrap table th {padding: 5px 0px; line-height: 30px;}
+
+
+    .modal_table_data_wrap table th:not(:first-child) > div > label {display: block;}
+
+    /* td */
+    .modal_table_data_wrap table > tbody > tr > td {width: 45%; font-size: 14px; line-height: 35px; height: 35px; font-size: 14px;} 
+    .modal_table_data_wrap table > tbody > tr > td:first-child {width: calc(8% + 7px);}
+
+
+
+    /* modalData */
+    .modal_table_data_wrap .modalData {padding: 15px 23px; border-radius: 6px;}
+    .modal_table_data_wrap .modalData .modalTableName {font-size: 16px;  margin-bottom: 15px;}
+
+
+    .modal_table_data_wrap .modalData .table_name_box {height: calc(100% - 35px); padding: 0px 30px;}
+
+    /* tables */
+    .modal_table_data_wrap .modalData .table_name_box .name_table {margin-bottom: 20px;}
+
+    /* th */
+    .modalData .table_name_box .name_table > thead > tr > th { font-size: 15px; line-height: 35px;}
+
+    /* td */
+    .modalData .table_name_box .name_table > tbody > tr > td {line-height: 30px; width: 30%; text-align: left; height: 30px; padding-right: 20px; font-size: 12px;} 
+
+
+    .modalVisual {flex-direction: column; max-height: 560px; height: 100%;}
+    .modalVisual .modalChartContainer {width: 100%; padding: 0px 0px 0 0; background-color: #EEF2F5;}
+    .modalVisual .modalChartContainer .modalChartWrap {background-color: #fff; padding: 20px; border: 1px solid #E6EBEE; border-radius: 6px;}
+
+    .modalVisual .modal_table_data_wrap {display: none; width: 100%;}
+
+    .modal_tab_menu {display: block; display: flex; justify-content: space-between; margin-bottom: 8px;}
+    .modal_tab_menu > li {font-size: 11px; color: #A7AABF; font-weight: bold; line-height: 30px; border-radius: 15px; padding: 0 10px; letter-spacing: -0.05em;}
+    .modal_tab_menu > li.on {background-color: #397FF4; color: #fff;}
+
+    .modalVisual .modal_table_data_wrap .modalTable {width: 100%; height: 100%; padding: 10px;}
+    .modalVisual .modal_table_data_wrap .modalTable > table {max-height: 430px; height: 100%; }
+
+    .modalVisual .modal_table_data_wrap .modalTable > table > tbody {height: 100%;}
+    .modalVisual .modal_table_data_wrap .modalTable > table th {font-size: 12px;}
+
+    .modalVisual .modalTableName {margin-bottom: 20px; font-size: 14px;}
+
+    .modalVisual .modal_table_data_wrap .modalTable > table > tbody td {font-size: 11px;}
+
+
+
+
+
+    .modalVisual .modal_table_data_wrap .modalData {padding:20px 10px 0; height: calc(100% - 0px);}
+    .modalVisual .modal_table_data_wrap .modalData .table_name_box {padding: 0 10px; height: calc(100% - 60px);}
+    .modalVisual .modal_table_data_wrap .modalData .modalTableName {padding: 5px 0 0px 7px;}
+    
+    
+    /* 21-12-15 추가 - css */
+     .select_box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .select_box .select_wrap {
+        width: calc(50% - 2.5px);
+    }
+    
+    .select_box .select_wrap .data_name {
+        padding-left: 3px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    
+    .select_box .select_wrap:last-child .data_name {
+        padding-left: 6px;
+    }
+    
+    .select_box .select_wrap select {
+        width: 100%;
+    }
+
+     .mab_bar_right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_file_wrap > .file_text {
+        width: 340px;
+    }
+
+    .input_file_wrap {
+        width: auto;
+    }
+
+    .mab_bar_right .select_top_box {
+        margin-left: 0;
+        display: flex;
+    }
+
+    .select_top_box > label {
+        margin: 0;
+        width: calc(50% - 6px);
+    }
+
+    .select_top_box > label > .com_select {
+        padding: 0 10px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .select_top_box > label:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .select_top_box {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    #header + #main .user_header {
+        margin-bottom: 70px;
+    }
+
+    #main div.view {
+        position: absolute;
+        left: -15px;
+        top: -103px;
+        width: 170px;
+    }
+
+    #main .view .commonBtn {
+        width: 170px;
+        margin-left: 0;
+    }
+
+    .data_table_title_wrap a {
+        position: absolute;
+        left: 125px;
+        top: -49px;
+    }
+
+    .data_table_title_wrap a,
+    #main .view .commonBtn {
+        font-size: 12px;
+    }
+
+    #main .mark_map_sect .data_table_title {
+        letter-spacing: -0.05rem;
+        
+    }
+    
+    .data_table_title_wrap {
+        margin-bottom: 20px;
+    }
+
+    .visualWrap .chartArea .cart_header .chartInput {
+        max-width: 160px;
+    }
+    
+    .sect_warp {
+        position: relative;
+    }    
+
+    .modal_close {
+        top: 15px;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background: url(/images/close_m.png) no-repeat;
+        background-size: 100%;
+    }
+    
+
+    .modalContent {
+        overflow: hidden;
+    }
+    
+    .modalVisual .modal_table_data_wrap .modalData,
+    .modalVisual .modal_table_data_wrap .modalTable,
+    .modalVisual .modalChartContainer .modalChartWrap {
+        padding: 10px;
+        height: calc(100% - 34px);
+    }
+
+    .modalContent .data_header {
+        margin-right: 40px;
+    }
+    
+    
+    
+    
+    
+     /* 21-12-20 수정 */
+	#main .mab_top_bar {
+		padding-bottom: 30px;
+		margin-bottom: 40px;	
+	}
+	
+	.data_table_title_wrap {
+		margin-bottom: 20px;
+	}
+	
+	#main section .data_table_title {
+		font-size: 16px;
+	}
+		
+	#main .mab_top_bar select,
+	#main .mab_top_bar input,
+	#main .mab_top_bar span,
+	#main .mab_top_bar a {
+		font-size: 12px;
+	} 
+	
+	/* download_btn_wrap */
+    .download_btn_wrap {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+	
+	#main .download_btn_wrap .downloadSelectBox {
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	
+	#main .download_btn_wrap .download {
+	    	margin-left: 0 !important;
+	    	width: 100%;
+	}
+	
+	
+	
+	#main .download_btn_wrap .commonBtn.download {
+		margin-left: 0 !important;
+	}
+	
+	
+	#main .sect_warp .view,
+	#main .sect_warp .view > .commonBtn {
+		width: 120px;
+	}
+	
+	
+	.data_table_title_wrap .result_down_btn {
+		left: 110px;
+	}
+	
+	
+	section .input_file_wrap {
+		margin-bottom: 0px;
+	}
+	
+	
+	section .data_table_title_wrap .result_down_btn {
+		top: -40px;
+	}
+	
+	.modalContent .data_header .export_btn {
+		margin-right: 5px !important;
+	}
+	
+	.modalContent .data_header,
+	.modalContent .data_header .export_btn:last-child {
+		margin-right: 0px !important;
+	}
+	
+	#polyModalInput {
+		height: 30px;
+		width: 100%;
+	}
+	
+	.modalContent .modalTitle {
+		width: 110px;
+	}
+	
+	
+	
+	#main .user_header .ui_list_wrap > .ui_list:nth-child(3) {
+	   width: 22px;
+	   height: 17px;
+	   margin-left: 0px;
+	   margin-right: 10px;
+	}
+	
+	#main .user_header .ui_list_wrap {
+	    top: 7px;
+	}
+	
+	
+	
+	#main .sect_warp .view, 
+	#main .sect_warp .view > .commonBtn {
+		width: 140px;
+	}
+	
+	#main .data_table_title_wrap .result_down_btn {
+		left: 150px;
+	}
+	
+	
+	
+	.mab_bar_right button.save {
+		position: absolute;
+	    top: -103px;
+	    left: 128px;
+	    font-size: 12px;
+	}
+	
+	
+	#main .mab_top_bar .give_info {bottom:-10px; top: auto; left: -1px; font-size: 14px; color: #707070; font-weight: bold;}
+	
+	#main .mab_top_bar .give_info {
+        font-size: 12px;
+        background-position: left 5px top 4px;
+        background-size: 13px;
+    }
+    
+    #main .mab_top_bar .de_give_info {
+	    top: auto;
+	    bottom: -30px;
+	}	
+	
+	
+	
+	
+}

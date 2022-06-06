@@ -1,0 +1,414 @@
+
+@media screen and (max-width:1600px){
+    #header {display: none; position: fixed; top: 0; left: 0; background: #F2F4FA; z-index: 999; box-shadow: 0 0 10px rgba(1,1,1,0.1);}
+    #header.on {display: block;}
+    .tb_blank.on {display: block; position: fixed; width: 100%; height: 100%; z-index: 500;}
+     div#wrap {padding: 12px 24px 0 24px;}
+    .search_wrap {display: flex; align-items: center; margin-bottom: 10px;}
+    .tb_menu_btn {display: block; cursor: pointer; margin-right: 30px;}
+    .tb_menu_btn span {display: block; width: 26px; height: 2px; background: #000; margin: 8px 0;}
+}
+
+@media screen and (max-width: 1280px) {
+    /* chartWrap */
+    #main .chartWrap {width: 100%; height: 570px; overflow: auto;}
+    #main .chartWrap #chartCanvas {width: auto; height: auto;}
+    
+    
+    
+    
+      /* 21-12-15 추가 - css */
+    .data_table_title_wrap {
+        margin-bottom: 5px;
+    }
+
+    .mab_bar > .input_file_wrap .ex_data {
+        position: absolute;
+        top: -17px;
+        left: -8px;
+        height: auto;
+    }
+
+    .mab_bar > .input_file_wrap > .under_marker_check {
+        bottom: -90px;
+        left: 3px;
+    }
+    
+    .mab_bar > .input_file_wrap > .under_marker_check input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .mab_top_bar {
+        padding-bottom: 60px;
+    }
+
+    .modalContent .data_header .print_btn {
+        margin-right: 5px;
+        background: #fff url(/images/print.png) no-repeat center center;
+        background-size: 40%;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .modalContent .modalTitle {
+        font-size: 16px;
+    }
+
+
+    .tableContainer .tableWrap .table > thead > tr > th {
+        line-height: 20px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    
+    .tableContainer .tableWrap .table > thead > tr > th:first-child {
+        line-height: 30px;
+    }
+    
+    .visualWrap .tableContainer .tableWrap,
+    .tableContainer .tableWrap .table {
+        max-width: 100%;
+    }
+    
+    
+    
+    
+   
+    
+    
+    
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    div#wrap {padding: 12px 0px 0px;}
+
+    /* main - header */
+    #main {padding: 0 0px 30px; overflow-y: auto;}
+    #main .user_header {background-color: #f2f4fa; padding: 50px 30px 30px; flex-direction: column-reverse; align-items: stretch; margin: 0 0 76px;}
+    
+    /* search */
+    #main .user_header .search_wrap {width: 100%; position: relative; display: flex; justify-content: right; top: 10px;}
+    #main .user_header .ui_list_wrap { position: relative; top: 10px;}
+   #main .user_header .ui_list_wrap > .ui_list {position: absolute; top: calc(50% + 2px);}
+    #main .user_header .search_wrap > .tb_menu_btn {margin-right: 0px; margin-top: 2px; position: absolute; right: 0; top: 50%; transform: translateY(calc(-50% - 5px));}
+
+    .tb_menu_btn span {display: block; width: 17px; height: 2px; margin: 5px 0;}
+    #main .user_header .search_wrap > label {position: absolute; right: 34px; top: 0px;}
+
+    /* search icon */
+    #main .user_header .search_wrap > label:before {top: 50%; transform: translateY(-50%); right: 25px; width: 20px; height: 20px;}
+
+    #main .user_header .search_wrap > label .search[type="text"] {border: 1px solid #E4E4E4; height: 30px; width: 0px; padding-left: 0px; opacity: 0;}
+
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(1) {height: 22px; left: 35px; bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(2) {bottom: -30px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(3) {width: 18px; height: 22px; right: 20px; bottom: -27px;}
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(4) {display: none;}
+
+
+
+    #main .data_table_section {margin: 90px 20px 0px; border: 1px solid #E6EBEE; border-radius: 4px; -webkit-border-radius: 4px; padding: 16px; position: relative; overflow: visible;}
+    
+
+    .mab_top_bar {align-items: flex-start; justify-content: left; padding-bottom: 0px;  margin-bottom: 50px; flex-direction: column; border: none;}
+    .mab_top_bar .give_info {bottom: -30px; left: 5px; font-size: 14px; color: #707070; font-weight: bold;}
+
+    .mab_bar_left,
+    .mab_bar_right {width: 100%; align-items: center;}
+    .mab_top_bar .mab_bar_left {margin-bottom: 0px; flex-direction: column; margin-right: 0; padding-right: 0;}
+    .mab_bar_left:after {display: none;}
+
+    .mab_bar > .input_file_wrap {padding-top: 15px; width: 100%;}
+
+    .mab_bar_left .select_box {margin-bottom: 0px; width: 100%;}
+    .mab_bar_left .select_box > .type_select {width: calc(45% - 10px); padding: 0 10px; font-size: 12px;}
+    .mab_bar_left .select_box > .type_select_info {width: 55%; padding: 0 10px; font-size: 12px;}
+
+    .mab_top_bar div.view {width: 168px; height: 40px; font-size: 14px; position: absolute; top: -80px; left: -21px; z-index: 99;}
+    .mab_top_bar div.view div{ border: none; margin: 10px 6px 0 0;}
+    #main .mab_top_bar div.view .commonBtn {line-height: 40px; font-size: 13px;}
+
+    .mab_chr_wrap {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;}
+    .mab_chr_wrap_left {margin-right: 0; width: 100%; border: none; padding: 0; border-radius: 0; height: 680px;}
+    .data_table_section:after {content: ''; position: absolute; top: calc(50% + 125px); transform: translateY(-50%); left: 0; right: 0; height: 10px; width: 100%; background-color: #E6EBEE; z-index: 999;}
+    .mab_chr_wrap_right {border: none; width: 100%;}
+
+
+    .mab_chr_wrap_left .btn_all_box {margin-bottom: 20px; padding-right: 5px;}
+
+    /* btn - wrap */
+    .chr_btn_wrap {display: flex; align-items: center; justify-content: space-between; width: 100%;}
+    .chr_select_wrap {display: flex; align-items: center; justify-content: flex-end; margin-top: 12px; position: relative;}
+    .chr_btn_wrap p {font-size: 16px;}
+    .commonBtn {width: 75px; height: 40px; font-size: 14px; line-height: 40px; text-align: center; border: 1px solid #000; background: #fff; color: #4E4E4E; border-radius: 4px; cursor: pointer; font-weight: bold; margin: 0 0px 0 6px;  position: relative; z-index: 1;}
+    .commonBtn.active {width: 75px; background: #4E4E4E; color: #fff; border: none;}
+    .chr_select_wrap p {width: 20%; height: 40px; font-size: 14px; line-height: 38px; border: 1px solid #E6EBEE;
+        margin-right: 10px; text-align: center; border-radius: 4px;}
+    .chr_select_wrap select {width: 140px; height: 40px; border: 1px solid #E6EBEE; border-radius: 4px; font-weight: bold;
+        background: #fff url('../../images/select_arrow.png') no-repeat center right 12px/8px; padding: 0 16px;}
+    .chr_select_wrap .commonBtn {width: 200px; border: none; margin: 0 0 0 10px; background: #fff; color: #4E4E4E; border: 1px solid #4E4E4E;}
+
+    .chr_select_wrap .commonBtn.allchr {position: absolute; left: 0; bottom: -50px; width: 100%; margin-left: 0;}
+    .chr_select_wrap .commonBtn.active {width: 100%; border: none; margin: 0 0 0 0px; background: #4E4E4E; color: #fff; border: 1px solid #4E4E4E;}
+
+
+    .table_page_wrap {position: relative; top: -1140px;}
+
+    .visualWrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tableWrap {position: relative; user-select:none; width: 100%; height: 480px; overflow: auto; margin: 0px; left: 0px; top: -20px;}
+
+    .graphContainer{
+        /* width: calc(100% - 40px); */
+        width: 100%;
+        height: 480px;
+        position: relative;
+        top: 120px;
+        left: 0px;
+    }
+    
+    .graphWrap {margin: 0; padding: 30px 0 20px;}
+
+    .data_table_title {font-size: 16px;}
+
+    .sect_warp {border: 1px solid #E6EBEE; border-radius: 4px; padding: 15px; margin: 0 10px;}
+
+    /* 표, 차트 */
+    /* header */
+    #main .data_header {margin-bottom: 20px; padding: 0;}
+    #main .data_header > .export_btn {font-size: 12px; line-height: 30px; padding: 0 20px;}
+    #main .data_header > .chartInput {margin-right: 10px; max-width: 200px;}
+
+    .data_table_section:after {display: none;}
+
+
+    /* chartWrap */
+    #main .chart_box_wrap {
+        /* height: 450px; */
+        /* padding: 20px 10px;  */
+        width: 100%;
+        /* overflow-x: auto; */
+    }
+    #main .chartWrap {
+        /* width: 700px; */
+        height: 100%;
+        /* height: 400px; */
+    }
+    #main .chartWrap #chartCanvas {width: auto; height: auto;}
+    
+    
+    
+    
+    /* 21-12-15 추가 - css */
+    #wrap #header + #main .user_header {
+        margin-bottom: 80px;
+    }
+
+   .select_box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .select_box .select_wrap {
+        width: calc(50% - 2.5px);
+    }
+
+    .select_box .select_wrap .data_name {
+        padding-left: 3px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .select_box .select_wrap:last-child .data_name {
+        padding-left: 6px;
+    }
+
+    .select_box .select_wrap select {
+        width: 100%;
+    }
+
+    .sect_warp {
+        position: relative;
+    }
+
+    .data_table_title_wrap a {
+        position: absolute;
+        left: 93px;
+        top: -50px;
+    }
+
+    .mab_bar > .input_file_wrap > .file_ex,
+    .data_table_title_wrap a,
+    #main .commonBtn {
+        font-size: 12px;
+    }
+
+
+    #main .view {
+        position: absolute;
+        left: -15px;
+        top: -94px;
+        width: 88px;
+    }
+
+    #main .view .commonBtn {
+        width: 88px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .mab_bar > .input_file_wrap {
+        flex-wrap: nowrap;
+    }
+
+    .mab_bar_right .input_file_wrap .file_text {
+        width: 100%;
+        margin-right: 5px;
+    }
+
+    .tableContainer .tableWrap .table > thead > tr > th {
+        line-height: 20px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    
+    .tableContainer .tableWrap .table > thead > tr > th:first-child {
+        line-height: 30px;
+    }
+    
+    .visualWrap .tableContainer .tableWrap,
+    .tableContainer .tableWrap .table {
+        max-width: 100%;
+    }
+
+    #main .chartInput {
+        font-size: 12px;
+        width: 160px;
+    }
+
+
+
+    .modal_close {
+        top: 15px;
+        right: 15px;
+        width: 24px;
+        height: 24px;
+        background: url(/images/close_m.png) no-repeat;
+        background-size: 100%;
+    }
+    
+
+    .modalContent {
+        overflow: hidden;
+    }
+    
+    .modalVisual .modal_table_data_wrap .modalData,
+    .modalVisual .modal_table_data_wrap .modalTable,
+    .modalVisual .modalChartContainer .modalChartWrap {
+        padding: 10px;
+        height: calc(100% - 50px);
+    }
+
+    .modalContent .data_header {
+        margin-right: 40px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     /* 21-12-20 수정 */
+	#main .mab_top_bar {
+		padding-bottom: 30px;
+		margin-bottom: 40px;	
+	}
+
+	#main .data_table_section .data_table_title {
+		font-size: 16px;
+	}
+	
+	#main .mab_top_bar select,
+	#main .mab_top_bar input,
+	#main .mab_top_bar span,
+	#main .mab_top_bar a {
+		font-size: 12px;
+	} 
+    
+    #main .data_header > .chartInput {
+    	margin-right: 0;
+    }
+    
+    
+    #main .data_header {
+    	flex-wrap: wrap;
+    }
+    
+   	/* download_btn_wrap */
+    .download_btn_wrap {
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+	
+	#main .download_btn_wrap .downloadSelectBox {
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	
+    #main .download_btn_wrap .download {
+    	margin-left: 0 !important;
+    	width: 100%;
+    }
+    
+    
+    .commonBtn.download {
+	    width: 100%;
+	    height: 40px;
+	    font-size: 12px;
+	    line-height: 40px;
+	    margin-left: 0;
+	    margin-bottom: 5px;
+	}
+	
+	#main .data_header > .chartInput {
+		max-width: 100%;
+		width: 100%;
+		line-height: 32px;
+	}
+	
+	#main .mab_top_bar {
+		padding-bottom: 0px;
+		margin-bottom: 0;
+	}
+    
+	 
+    
+    
+    
+    #main .user_header .ui_list_wrap > .ui_list:nth-child(3) {
+	   width: 22px;
+	   height: 17px;
+	   margin-left: 0px;
+	   margin-right: 10px;
+	}
+	
+	#main .user_header .ui_list_wrap {
+	    top: 7px;
+	}
+	    
+    
+    
+}
