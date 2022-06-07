@@ -87,8 +87,8 @@
                 <div class='download_btn_wrap' style="display:none;">
                    <select class="downloadSelectBox" id="select_file">
                         <option value="0" disabled selected hidden>파일 선택</option>
-                        <option value="1">table</option>
-                        <option value="2">map</option>
+                        <option value="1">map</option>
+                        <option value="2">table</option>
                     </select>
                     <div style="margin-right: auto; margin-left:10px;" class="commonBtn download" onclick="onClickDownload()">내려받기</div>                            
                 </div>

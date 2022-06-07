@@ -1155,7 +1155,7 @@ function drawModalInformation(currentColumn){
     tbody.innerHTML = "";
 
     var trTitle = document.createElement("tr");
-    trTitle.innerHTML = "<td></td>";
+    trTitle.innerHTML = "<td></td><td>Chr</td><td>Pos</td>";
     for(var i = 1 ; i < selectFirst.length ; i++){
         var tdTitle = document.createElement("td");
         tdTitle.innerText = selectFirst[i].innerText;
@@ -1180,7 +1180,7 @@ function drawModalInformation(currentColumn){
                     }
                     if(isFirst){
                         isFirst = false;
-                        //tbody.appendChild(trTitle);
+                        tbody.appendChild(trTitle);
                     }
                     tbody.appendChild(trDesc);
                 }
