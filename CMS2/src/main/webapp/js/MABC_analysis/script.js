@@ -154,7 +154,7 @@ function parsingDataMaker(xlsxData) {
         for (var i = 0; i < bigParseData[key].length; i++) {
             var currentData = bigParseData[key][i];
             var excelTitle_1 = getExcelTitleFromData(currentData, "분자표지명");
-            var excelTitle_3 = getExcelTitleFromData(currentData, "위치");
+            var excelTitle_3 = getExcelTitleFromData(currentData, "위치.bp.");
 
             parseData[currentData[excelTitle_1]] = currentData[excelTitle_3];
         }
@@ -175,7 +175,7 @@ function parsingData(xlsxData, isRun) {
 
             for (var key in xlsxData[i]) {
 
-                if (!key.includes("MAB"))
+                if (key.includes("염색체명") || key.includes("위치.bp.") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
                     continue;
 
 
@@ -216,7 +216,7 @@ function parsingData(xlsxData, isRun) {
                             _pos = 0;*/
                     }
 
-                    if (!key.includes("MAB"))
+                if (key.includes("염색체명") || key.includes("위치.bp.") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
                         continue;
 
                     let gene = xlsxData[i][getExcelTitleFromData(xlsxData[i], "염색체")];
@@ -1165,6 +1165,8 @@ function initAnimation() {
 // ------------------------------------------------------
 //                         모달
 // ------------------------------------------------------
+
+var cnt=0;
 function drawModalGraph(_graphName) {
 
 
@@ -1354,17 +1356,19 @@ function drawModalGraph(_graphName) {
         modalGraph.style.marginRight = marinLeft + 60 + "px";
     }
 
-    var mabcModalSelect = document.querySelector(".mabcModalSelect");
-    for (var key in chartDataArr) {
-        var selectOption = document.createElement('option');
-        selectOption.innerText = key;
-        selectOption.classList.add("modalSelectOption");
-        if (_graphName == key) {
-            selectOption.setAttribute("selected", true);
-        }
-        mabcModalSelect.appendChild(selectOption);
-    }
-
+	if(cnt==0){
+		var mabcModalSelect = document.querySelector(".mabcModalSelect");
+		for (var key in chartDataArr) {
+			var selectOption = document.createElement('option');
+			selectOption.innerText = key;
+			selectOption.classList.add("modalSelectOption");
+			if (_graphName == key) {
+				selectOption.setAttribute("selected", true);
+			}
+			mabcModalSelect.appendChild(selectOption);
+		}
+	}
+	cnt++;
 }
 function closeMOdal() {
     var modal = document.querySelector(".modal");
@@ -1372,8 +1376,6 @@ function closeMOdal() {
 }
 function onChangeModalSelect() {
     var mabcModalSelect = document.querySelector(".mabcModalSelect");
-
-
     drawModalGraph(mabcModalSelect.options[mabcModalSelect.selectedIndex].innerText)
 }
 function onClickZoom(isZoomIn) {
