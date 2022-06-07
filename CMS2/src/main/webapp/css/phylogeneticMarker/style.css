@@ -56,8 +56,8 @@
 
 /* mab_chr_wrap */
 .mab_chr_wrap {display: flex; justify-content: start; width: 100%;}
-.mab_chr_wrap_center {width: 100%; padding: 0 20px; border: 1px solid #E6EBEE; margin-right: 10px; height: 640px; border-radius: 8px; -webkit-border-radius: 8px; padding: 24px ;}
-.btn_all_box_content{max-width: 100%; overflow: auto; height: 556px; display:flex;}
+.mab_chr_wrap_center {width: 100%; padding: 0px; border: 1px solid #E6EBEE; margin-right: 10px; height: 2100px; border-radius: 8px; -webkit-border-radius: 8px; padding: 24px ;}
+.btn_all_box_content{max-width: 100%; display: block;  margin-left: auto;  margin-right: auto; }
 .btn_all_box_content img {max-width:unset !important;}
 .mab_chr_wrap_center .btn_all_box {margin-bottom: 20px; padding-right: 5px;}
 
@@ -544,11 +544,6 @@
 }
 
 
-#result_img {
-    display: block;
-    /* margin: 20px auto; */
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-}
 
 #main .downloadSelectBox {
     width: 140px;

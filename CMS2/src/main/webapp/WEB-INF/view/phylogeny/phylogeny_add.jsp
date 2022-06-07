@@ -61,7 +61,6 @@
 	               				<select class="downloadSelectBox" id="select_file" style="display:none" onchange="onChangeSelect()">
 			                        <option value="0" disabled="" selected="" hidden="">파일 선택</option>
 			                        <option value="1">표준형트리</option>
-			                        <option value="2">방사형트리</option>
 			                    </select>
 				                    
 	                            <div class="commonBtn download" style="display: none; text-align: center">
@@ -70,9 +69,9 @@
 	                            </div>
                             </div>
                             
-                            <div class="btn_all_box_content">
-                                <img alt="" id="result_img" src="" style="max-width: 35%;">
-                                <img alt="" id="result_img2" src="" style="max-width: 35%;">
+                            <div class="btn_all_box_content"><center>
+                                <img alt="" id="result_img" src="" style="max-width: 50%;">
+                                <!--<img alt="" id="result_img2" src="" style="max-width: 35%;">-->
                             </div>
                         </div>
                     </div>

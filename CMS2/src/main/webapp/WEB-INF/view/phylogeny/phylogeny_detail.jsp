@@ -94,8 +94,8 @@
                             
                             
                             <div class="btn_all_box_content">
-                                <img style="max-width: 35%;" id="result_img" alt="" src="">
-                                <img style="max-width: 35%;" id="result_img2" alt="" src="">
+                                <img style="max-width: 100%;" id="result_img" alt="" src="">
+                               <!--<img style="max-width: 35%;" id="result_img2" alt="" src="">-->
                             </div>
                         </div>
                     </div>
@@ -194,8 +194,8 @@
 				loading.classList.remove('on');
 				
 				$("#result_img").attr("src", result + "_upgma_1.png");
-				$("#result_img2").attr("src", result + "_upgma_2.png");
-				$("#result_file").attr("href", result + "_upgma.png");
+				//$("#result_img2").attr("src", result + "_upgma_2.png");
+				//$("#result_file").attr("href", result + "_upgma.png");
 				$("#outcome_file").val(result);
 				
 				$(".download").css("display", "block");
