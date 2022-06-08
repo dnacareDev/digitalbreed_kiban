@@ -61,13 +61,20 @@
                 </div>
                 <div class="mab_top_bar">
                     <div class="mab_bar_right mab_bar">
-                    	<form action="InsertQTL" id="insertForm" method="POST" enctype="multipart/form-data">
+						<form action="InsertQTL" id="insertForm" method="POST" enctype="multipart/form-data">
+                    	
 	                        <div class="input_file_wrap">
 	                            <input type="text" class="file_text" placeholder="" readonly disabled>
-	                            <input id="input-file" type="file" class="addMabcFile" name="file" accept=".xlsx" >
+	                            <input id="input-file" name="input-file" type="file" class="addMabcFile" name="file" accept=".xlsx" >
 	                            <div class="flie_btn_box">
 	                                <label for="input-file" class="file_add">파일첨부</label>
-	                            </div>
+	                            </div>	
+								<div class="memo_wrap_lod">
+	                               <div id="memo_lod" >
+		                                <span class="memo_text_lod">LOD</span>
+		                            	<input type="text" name="lod" id="lod">
+	                               </div>
+	                           </div>	                                                        
                               	<div class="memo_wrap">
 	                               <div id="memo" style="display: none;">
 		                                <span class="memo_text">메모</span>
@@ -212,6 +219,7 @@
 			return;
 		}
 		
+	
 		var data = new FormData($("#insertForm")[0]);
 		
 		var loading = document.querySelector('.load_wrap');
@@ -286,14 +294,15 @@
 		var user_username = $("#user_username").val();
 		var outcome_file = $("#outcome_file").val();
 		var outcome_comment = $("#outcome_comment").val();
-		
+		var lod = $("#lod").val();
+
 		if(outcome_file == "")
 		{
 			alert("저장할 결과가 없습니다.")
 		}
 		else
 		{
-			var data = {"user_username" : user_username, "outcome_file" : outcome_file, "outcome_type" : 6, "outcome_comment" : outcome_comment};
+			var data = {"user_username" : user_username, "outcome_file" : outcome_file, "outcome_type" : 6, "outcome_comment" : outcome_comment, "lod" : lod};
 			
 			$.ajax(
 			{

@@ -6,7 +6,7 @@ import java.text.*;
 
 public class RunQtl {
           
-	public  void MakeRunQtl(String jobid, String filename) {
+	public  void MakeRunQtl(String jobid, String filename, String lod) {
 
 		//public static void main(String[] args) {
 
@@ -18,7 +18,7 @@ public class RunQtl {
 		//String input_file = jobid+"_"+filename;
 		String result_path = r_path+"qtl/"+jobid+"/";
 
-		String cmd = "Rscript " + r_path+"final_qtl.R "  + " " + jobid + " " + filename;
+		String cmd = "Rscript " + r_path+"final_qtl.R "  + " " + jobid + " " + filename+ " " + lod;
 
 		System.out.println(" RunUpgma cmd : " + cmd);
 		execute(cmd);

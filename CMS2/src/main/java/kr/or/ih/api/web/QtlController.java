@@ -126,8 +126,11 @@ public class QtlController
 	
 	@ResponseBody
 	@RequestMapping("insertQTL")
-	public String InsertQTL(@RequestParam("file") MultipartFile file)
+	public String InsertQTL(@RequestParam("lod") String lod, @RequestParam("input-file") MultipartFile file) throws InterruptedException
+	
 	{
+		System.out.println("lod : " + lod);
+		
 		Date date = new Date();
 		String date_name = (1900 + date.getYear()) + "" + (date.getMonth() + 1) + "" + date.getDate() + "" + date.getHours() + "" + date.getMinutes() + "" + date.getSeconds();
 		
@@ -146,7 +149,7 @@ public class QtlController
 			file.transferTo(new File(path + "/" + file_name));
 			
 			RunQtl runqtl = new RunQtl();
-			runqtl.MakeRunQtl(date_name, file_name);
+			runqtl.MakeRunQtl(date_name, file_name, lod);
 		}
         catch(IOException e)
         {

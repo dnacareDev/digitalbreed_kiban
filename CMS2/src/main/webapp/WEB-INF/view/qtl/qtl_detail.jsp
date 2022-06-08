@@ -81,17 +81,30 @@
                 <div class="mab_top_bar">
                 
                     <div class="mab_bar_right mab_bar">
-                    	<form action="InsertQTL" id="insertForm" method="POST" enctype="multipart/form-data">
+						<form action="InsertQTL" id="insertForm" method="POST" enctype="multipart/form-data">
+                    	
 	                        <div class="input_file_wrap">
 	                            <input type="text" class="file_text" placeholder="" readonly disabled>
-	                            <input id="input-file" type="file" class="addMabcFile" name="file" accept=".csv" >
+	                            <input id="input-file" name="input-file" type="file" class="addMabcFile" name="file" accept=".xlsx" >
 	                            <div class="flie_btn_box">
 	                                <label for="input-file" class="file_add">파일첨부</label>
-	                                <button type="button" class="save" onclick="SaveBtn()">분석저장</button>
-	                            </div>
+	                            </div>	
+								<div class="memo_wrap_lod">
+	                               <div id="memo_lod" >
+		                                <span class="memo_text_lod">LOD</span>
+		                            	<input type="text" name="lod" id="lod">
+	                               </div>
+	                           </div>	                                                        
+                              	<div class="memo_wrap">
+	                               <div id="memo" style="display: none;">
+		                                <span class="memo_text">메모</span>
+		                            	<input type="text" id="outcome_comment">
+	                               </div>
+	                                <button type="button" class="save" id="qtlSaveBtn" onclick="SaveBtn()" style="display: none;">분석저장</button>
+	                           </div>
 	                        </div>
                         </form>
-                    </div>	
+                    </div>
                     <div class="view" >
                         <div class="commonBtn" onclick="InsertBtn()">QTL 분석실행</div>
                     </div>
