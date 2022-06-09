@@ -175,7 +175,7 @@ function parsingData(xlsxData, isRun) {
 
             for (var key in xlsxData[i]) {
 
-                if (key.includes("염색체명") || key.includes("위치.bp.") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
+                if (key.includes("염색체명") || key.includes("위치(bp)") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
                     continue;
 
 
@@ -216,7 +216,7 @@ function parsingData(xlsxData, isRun) {
                             _pos = 0;*/
                     }
 
-                if (key.includes("염색체명") || key.includes("위치.bp.") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
+                if (key.includes("염색체명") || key.includes("위치(bp)") || key.includes("분자표지명") || key.includes("Recurrent") || key.includes("Donor"))
                         continue;
 
                     let gene = xlsxData[i][getExcelTitleFromData(xlsxData[i], "염색체")];
