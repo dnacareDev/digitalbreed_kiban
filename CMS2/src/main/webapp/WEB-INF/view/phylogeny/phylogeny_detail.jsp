@@ -83,8 +83,6 @@
 			                    <select class="downloadSelectBox" id="select_file" onchange="onChangeSelect()">
 			                        <option value="0" disabled="" selected="" hidden="">파일 선택</option>
 			                        <option value="1">표준형트리</option>
-			                        <option value="2">방사형트리</option>
-			                        <option value="3">터미널노드</option>
 			                    </select>
 			                    
 	                            <div class="commonBtn download">
@@ -93,8 +91,8 @@
                         	</div>
                             
                             
-                            <div class="btn_all_box_content">
-                                <img style="max-width: 100%;" id="result_img" alt="" src="">
+                            <div class="btn_all_box_content"><center>
+                                <img alt="" id="result_img" src="" style="max-width: 50%;">
                                <!--<img style="max-width: 35%;" id="result_img2" alt="" src="">-->
                             </div>
                         </div>
@@ -183,7 +181,7 @@
 					
 					if(percent == 100)
 					{
-						document.getElementsByClassName("load")[0].children[0].innerHTML = "잠시만 기다려주세요.<br/>분석 준비중입니다.";
+						document.getElementsByClassName("load")[0].children[0].innerHTML = "잠시만 기다려주세요.<br/>분석 진행중입니다.";
 					}
 				};
 				
@@ -193,15 +191,21 @@
 			{
 				loading.classList.remove('on');
 				
+				_url = result + "_upgma_1.png";
+				_url2 = result + "_upgma_2.png";
+				
 				$("#result_img").attr("src", result + "_upgma_1.png");
-				//$("#result_img2").attr("src", result + "_upgma_2.png");
-				//$("#result_file").attr("href", result + "_upgma.png");
+				$("#result_img2").attr("src", result + "_upgma_2.png");
+				$("#result_file").attr("href", result + "_upgma.png");
 				$("#outcome_file").val(result);
 				
 				$(".download").css("display", "block");
 				$("#download_file").attr("href", result + "_upgma.png");
+			
+				document.querySelector("#select_file").style.display="unset";
 				
 				$("#phyloSaveBtn").css("display", "block");
+				$("#memo").css("display", "flex");
 				
 		    	$.ajax(
     			{
