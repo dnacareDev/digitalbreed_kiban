@@ -83,10 +83,12 @@
 			                    <select class="downloadSelectBox" id="select_file" onchange="onChangeSelect()">
 			                        <option value="0" disabled="" selected="" hidden="">파일 선택</option>
 			                        <option value="1">표준형트리</option>
+									<option value="2">Distance matrix</option>
 			                    </select>
 			                    
 	                            <div class="commonBtn download">
-	                            	<a download="upgma.png" id="downloadImg" onclick="<c:out value='DownloadBtn(${outcome.outcome_id});'/>">내려받기</a>
+	                            	<!--<a download="upgma.png" id="downloadImg" onclick="<c:out value='DownloadBtn(${outcome.outcome_id});'/>">내려받기</a>-->
+									<a href="javascript:onClickDownload();">내려받기</a>
 	                            </div>
                         	</div>
                             
@@ -257,7 +259,7 @@
     }
     
    	var _url = '${outcome.outcome_file.replace("_upgma.png", "_upgma_1.png")}';
-   	var _url2 = '${outcome.outcome_file.replace("_upgma.png", "_upgma_2.png")}';
+   	var _url2 = '${outcome.outcome_file.replace("_upgma.png", "_upgma_list.csv")}';
    	var _url3 = '${outcome.outcome_file.replace("_upgma.png", "_upgma_list.csv")}';
     function runScreen(){
     	
@@ -290,16 +292,45 @@
 		if(selectText == "표준형트리"){
 			downloadImg.setAttribute("download", "upgma.png")
 			downloadImg.setAttribute("href", _url)
-		}else if(selectText == "방사형트리"){
-			downloadImg.setAttribute("download", "upgma.png")
+		}else if(selectText == "Distance matrix"){
+			downloadImg.setAttribute("download", "upgma_list.csv")
 			downloadImg.setAttribute("href", _url2)
 		}else{
 			downloadImg.setAttribute("download", "upgma_list.csv")
 			downloadImg.setAttribute("href", _url3)
 			return;
 		}
+    }
 
-		
+	    function onClickDownload()
+    {
+    	var select_file = $("#select_file").val();
+    	
+    	if(select_file == 0)
+    	{
+    		alert("내려받을 파일을 선택하세요.");
+    	}
+    	else
+    	{
+    		let a = document.createElement('a');
+	    	a.style.display = 'none';
+	    	
+	    	var a_url = $("#outcome_file").val();
+	    	
+	    	if(select_file == 1)
+	    	{
+	    		a.setAttribute("download", "upgma.png");
+		    	a.href = _url;
+	    	}
+	    	else if(select_file == 2)
+	    	{
+	    		a.setAttribute("download", "upgma_list.csv");
+		    	a.href = _url;
+	    	}
+	    	
+	    	document.body.appendChild(a);
+	    	a.click();
+    	}
     }
 </script>
 </html>

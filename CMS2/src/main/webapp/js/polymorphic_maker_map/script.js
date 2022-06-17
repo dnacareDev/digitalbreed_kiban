@@ -604,6 +604,7 @@ function drawChart(){
 }
 // # . 3 테이블 그리기
 function drawTable(){
+	GeneticDB = [];
     for(var key in parseData){
         for(var keyStack in parseData[key]){
             drawTableEl(key, keyStack)
@@ -615,6 +616,7 @@ function drawTable(){
 // # . 3-1 정렬 테이블 그리기
 function drawSortTable(type){
     initTable();
+	GeneticDB = [];
     var newParseData = [];
     for(var key in parseData){
         for(var keyStack in parseData[key]){
@@ -695,6 +697,9 @@ function drawTableEl(key, keyStack){
         tr.classList.add("activeEl");
         // tr.style.border = "2px solid #000";
     }
+
+	GeneticDB.push([key, keyStack, trPos.innerText]);
+
     trMolecule.innerText = stackEl["molecule"];
     tdInputWrap.appendChild(tdInput);
     tr.appendChild(tdInputWrap);
@@ -1147,7 +1152,7 @@ function drawModalTable(currentColumn){
 function drawModalInformation(currentColumn){
 
     var _modalData = document.querySelector("#_modalData");
-    var tbody = _modalData.querySelector("tbody");
+    var tbody = _modalData.querySelector("tbody ");
     var selectFirst  = document.querySelector(".selectFirst ").children;
     if(selectFirst.length == 1){return;}
     selectFirst = [...selectFirst];
@@ -1155,7 +1160,7 @@ function drawModalInformation(currentColumn){
     tbody.innerHTML = "";
 
     var trTitle = document.createElement("tr");
-    trTitle.innerHTML = "<td></td><td>Chr</td><td>Pos</td>";
+    trTitle.innerHTML = "<td></td>";
     for(var i = 1 ; i < selectFirst.length ; i++){
         var tdTitle = document.createElement("td");
         tdTitle.innerText = selectFirst[i].innerText;
@@ -1180,7 +1185,7 @@ function drawModalInformation(currentColumn){
                     }
                     if(isFirst){
                         isFirst = false;
-                        tbody.appendChild(trTitle);
+                      //  tbody.appendChild(trTitle);
                     }
                     tbody.appendChild(trDesc);
                 }
@@ -1219,7 +1224,6 @@ function addEventStack(currentColumn){
         })
     }
 }
-
 function onClickModalBg(){
     autoStatus = false;
     document.querySelector(".modalWrap").style.display = "none";
@@ -1418,18 +1422,44 @@ function onChangeModalAllCkBox(e){
 //                         사진찍기
 // ------------------------------------------------------
 function downloadTableImg(){
+
+	let checkedArr = [];
+
+	/*for(let i=0 ; i<$(".tableInput").length; i++) {
+		if( $(".tableInput")[i].checked ) {
+			checkedArr.push(GeneticDB[i]);
+		} 
+	}*/
+
+
+	checkedArr.push(["염색체명","분자표지명","위치(bp)"]);
+	for(let i=0 ; i<$(".tableInput").length; i++) {
+		if( $(".tableInput")[i].checked ) {
+			checkedArr.push(GeneticDB[i]);
+	//		excel_content +="[";
+	//		excel_content += GeneticDB[i];
+	//		excel_content +="],";
+		} 
+	}
+
+	console.log("GeneticDB", GeneticDB);
+	console.log("checkedArr : ", checkedArr);
+
     var excelHandler = {
         getExcelFileName : function(){
-            return DateText(today) + "_maker_map_"+fileName+".xlsx";	//파일명
+            return DateText(today) + "_polymorphic_marker_map_"+fileName+".xlsx";	//파일명
         },
         getSheetName : function(){
-            return 'maker_map';	//시트명
+            return 'polymorphic_marker_map';	//시트명
         },
         getExcelData : function(){
-            return document.querySelector('.table'); 	//TABLE id
+            //return document.querySelector('.table'); 	//TABLE id
+			return checkedArr;
+
         },
         getWorksheet : function(){
-            return XLSX.utils.table_to_sheet(this.getExcelData());
+            //return XLSX.utils.table_to_sheet(this.getExcelData());
+			return XLSX.utils.aoa_to_sheet(this.getExcelData());
         }
     }
 

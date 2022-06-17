@@ -61,11 +61,13 @@
 	               				<select class="downloadSelectBox" id="select_file" style="display:none" onchange="onChangeSelect()">
 			                        <option value="0" disabled="" selected="" hidden="">파일 선택</option>
 			                        <option value="1">표준형트리</option>
+									<option value="2">Distance matrix</option>
 			                    </select>
 				                    
 	                            <div class="commonBtn download" style="display: none; text-align: center">
 	                            	<!-- <a download="upgma.png" href="" id="download_file">내려받기</a> -->
-	                            	<a download="upgma.png" id="downloadImg">내려받기</a>
+	                            	<!--<a download="upgma.png" id="downloadImg">내려받기</a>-->
+									<a href="javascript:onClickDownload();">내려받기</a>
 	                            </div>
                             </div>
                             
@@ -139,7 +141,7 @@
 				loading.classList.remove('on');
 				
 				_url = result + "_upgma_1.png";
-				_url2 = result + "_upgma_2.png";
+				_url2 = result + "_upgma_list.csv";
 				
 				$("#result_img").attr("src", result + "_upgma_1.png");
 				$("#result_img2").attr("src", result + "_upgma_2.png");
@@ -222,13 +224,45 @@
 		var downloadImg = document.querySelector("#downloadImg");;
 		if(selectText == "표준형트리"){
 			downloadImg.setAttribute("href", _url)
-		}else if(selectText == "방사형트리"){
+		}else if(selectText == "Distance matrix"){
 			downloadImg.setAttribute("href", _url2)
 		}else{
 			return;
 		}
 
 		
+    }
+
+		
+    function onClickDownload()
+    {
+    	var select_file = $("#select_file").val();
+    	
+    	if(select_file == 0)
+    	{
+    		alert("내려받을 파일을 선택하세요.");
+    	}
+    	else
+    	{
+    		let a = document.createElement('a');
+	    	a.style.display = 'none';
+	    	
+	    	var a_url = $("#outcome_file").val();
+	    	
+	    	if(select_file == 1)
+	    	{
+	    		a.setAttribute("download", "upgma.png");
+		    	a.href = a_url + "_upgma_1.png";
+	    	}
+	    	else if(select_file == 2)
+	    	{
+	    		a.setAttribute("download", "upgma_list.csv");
+		    	a.href = a_url + "_upgma_list.csv";
+	    	}
+	    	
+	    	document.body.appendChild(a);
+	    	a.click();
+    	}
     }
 </script>
 </html>
