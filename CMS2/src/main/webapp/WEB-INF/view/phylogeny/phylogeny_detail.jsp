@@ -325,7 +325,7 @@
 	    	else if(select_file == 2)
 	    	{
 	    		a.setAttribute("download", "upgma_list.csv");
-		    	a.href = _url;
+		    	a.href = _url2;
 	    	}
 	    	
 	    	document.body.appendChild(a);
